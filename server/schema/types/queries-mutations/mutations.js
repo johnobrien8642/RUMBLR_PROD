@@ -4,7 +4,7 @@ import bcrypt from 'bcryptjs';
 import Validator from 'validator';
 import aws from 'aws-sdk';
 
-import keys from '../../../config/keys_dev.js'
+import keys from '../../../config/keys.js'
 import UserType from '../objects/user_type.js';
 import AuthService from '../../../services/auth_util.js';
 import RepostType from '../objects/posts/util/repost_type.js';
