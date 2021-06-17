@@ -6,7 +6,7 @@ import path from 'path';
 
 import aws from 'aws-sdk';
 import ogs from 'open-graph-scraper';
-import keys from '../../config/keys_dev.js'
+import keys from '../../config/keys.js'
 
 const Image = mongoose.model('Image')
 const Audio = mongoose.model('Audio')
