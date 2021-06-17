@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 import aws from 'aws-sdk';
-import keys from '../../../../config/keys_dev.js';
+import keys from '../../../../config/keys.js';
 import CreateOrUpdateFunctionUtil from './create_or_update_function_util.js'
 import DeleteFunctionUtil from './delete_function_util.js'
 const User = mongoose.model('User')
