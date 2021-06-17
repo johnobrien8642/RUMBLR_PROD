@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import keys from '../../config/keys_dev.js';
+import keys from '../../config/keys.js';
 import Cookies from 'js-cookie';
 import validateRegisterInput from '../validations/register.js';
 import validateLoginInput from '../validations/login.js';
