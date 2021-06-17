@@ -17,6 +17,13 @@ const { cronTagFollowerHeat,
 
 const app = express();
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'))
+  app.get('/*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+  })
+}
+
 mongoose
   .connect(keys.mongoURL, { 
     useUnifiedTopology: true,
@@ -32,12 +39,6 @@ cronTagPostHeat.start()
 cronPostNotesHeat.start()
 cronUserPostingHeat.start()
 
-// if (process.env.NODE_ENV === 'production') {
-//   app.use(express.static('client'))
-//   app.get('/*', (req, res) => {
-//     res.sendFile(path.resolve(__dirname, 'client', 'public', 'index.html'))
-//   })
-// }
   
 app.use(express.json())
 app.use('/api/posts', posts);
