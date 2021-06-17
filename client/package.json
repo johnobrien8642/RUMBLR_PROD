@@ -29,8 +29,7 @@
     "sass": "^1.32.12",
     "url-metadata": "^2.5.0",
     "validator": "^13.5.2",
-    "web-vitals": "^1.0.1",
-    "webpack": "^4.44.2"
+    "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

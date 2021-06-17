@@ -9,7 +9,7 @@
     "client": "npm start --prefix client",
     "server": "nodemon index.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "npm install && npm install --prefix client"
+    "build": "npm install && npm install --prefix client --legacy-peer-deps"
   },
   "repository": {
     "type": "git",
@@ -63,7 +63,6 @@
     "tinymce": "^5.7.1",
     "uuid": "^8.3.2",
     "validator": "^13.5.2",
-    "webpack": "^5.39.0",
     "ws": "^6.2.1"
   }
 }
