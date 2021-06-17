@@ -2,7 +2,7 @@ import express from 'express';
 const router = express.Router();
 import nodemailer from 'nodemailer';
 import mongoose from 'mongoose';
-import keys from '../../../config/keys_dev.js';
+import keys from '../../../config/keys.js';
 const User = mongoose.model('User');
 
 router.post('/send-auth', function(req,res, next) {
