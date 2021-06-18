@@ -17,15 +17,15 @@ const { cronTagFollowerHeat,
 
 const app = express();
 
-mongoose
-  .connect(keys.mongoURL, { 
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false
-  })
-  .then(() => console.log('Connected to MongoDB successfully'))
-  .catch(err => console.log(err))
+// mongoose
+//   .connect(keys.mongoURL, { 
+//     useUnifiedTopology: true,
+//     useNewUrlParser: true,
+//     useCreateIndex: true,
+//     useFindAndModify: false
+//   })
+//   .then(() => console.log('Connected to MongoDB successfully'))
+//   .catch(err => console.log(err))
 
 app.use(express.static('client/build'))
 app.get('*', (req, res) => {
