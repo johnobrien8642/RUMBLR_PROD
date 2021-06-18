@@ -16,7 +16,7 @@ const { cronTagFollowerHeat,
         cronUserPostingHeat } = CronUtil;
 
 const app = express();
-console.log(process.env.NODE_ENV)
+
 if (process.env.NODE_ENV === 'production') {
   console.log('made it to serving client')
   app.use(express.static('client/build'))
