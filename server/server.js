@@ -16,16 +16,18 @@ const { cronTagFollowerHeat,
         cronUserPostingHeat } = CronUtil;
 
 const app = express();
-mongoose.set('bufferCommands', false)
+
 mongoose
-  .connect(keys.mongoURL, { 
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false
-  })
-  .then(() => console.log('Connected to MongoDB successfully'))
-  .catch(err => console.log(err))
+.connect(keys.mongoURL, { 
+  useUnifiedTopology: true,
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useFindAndModify: false
+})
+.then(() => console.log('Connected to MongoDB successfully'))
+.catch(err => console.log(err))
+
+mongoose.set('bufferCommands', false)
 
 app.use(express.static('client/build'))
 app.get('*', (req, res) => {
