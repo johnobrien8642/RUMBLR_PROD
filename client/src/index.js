@@ -33,7 +33,6 @@ const httpLink = new HttpLink({
 });
 
 const errorLink = onError(({ graphQLErrors, networkError }) => {
-  console.log(graphQLErrors)
   if (graphQLErrors)
   graphQLErrors.forEach(({ message, locations, path }) =>
     console.log(

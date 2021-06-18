@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 import express from 'express';
 import { graphqlHTTP } from 'express-graphql';
+import path from 'path';
 import models from './models/index.js';
 import keys from './config/keys.js'
 import schema from './schema/schema.js';
@@ -20,7 +21,7 @@ app.use(express.static('client/build'))
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
 })
-console.log(keys.mongoURL)
+
 mongoose
   .connect(keys.mongoURL, { 
     useUnifiedTopology: true,
