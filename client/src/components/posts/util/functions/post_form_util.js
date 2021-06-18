@@ -670,7 +670,6 @@ const handleFormData = (
     var file2 = imageFileArr[i];
     formData.append('images', file2);
   }
-  console.log(formData)
   
   return formData
 }

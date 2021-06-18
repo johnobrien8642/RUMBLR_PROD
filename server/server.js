@@ -9,7 +9,6 @@ import mailer from './routes/api/mailer.js';
 import CronUtil from './cron/cron_util.js'
 import { expressCspHeader, SELF } from 'express-csp-header';
 import cors from 'cors';
-const url = 'mongodb://127.0.0.1:27017/Rumblr_MERNG';
 const { cronTagFollowerHeat,
         cronPostNotesHeat,
         cronTagPostHeat,
@@ -17,14 +16,11 @@ const { cronTagFollowerHeat,
 
 const app = express();
 
-// if (process.env.NODE_ENV === 'production') {
-  console.log('made it to serving client')
-  app.use(express.static('client/build'))
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
-  })
-// }
-
+app.use(express.static('client/build'))
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+})
+console.log(keys.mongoURL)
 mongoose
   .connect(keys.mongoURL, { 
     useUnifiedTopology: true,
