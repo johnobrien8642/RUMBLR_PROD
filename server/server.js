@@ -16,7 +16,7 @@ const { cronTagFollowerHeat,
         cronUserPostingHeat } = CronUtil;
 
 const app = express();
-
+mongoose.set('bufferCommands', false)
 mongoose
   .connect(keys.mongoURL, { 
     useUnifiedTopology: true,
