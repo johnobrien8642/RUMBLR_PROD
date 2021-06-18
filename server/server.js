@@ -22,12 +22,13 @@ mongoose
   useUnifiedTopology: true,
   useNewUrlParser: true,
   useCreateIndex: true,
-  useFindAndModify: false
+  useFindAndModify: false,
+  serverSelectionTimeoutMS: 1000,
+  bufferMaxEntries: 0,
+  bufferCommands: false
 })
 .then(() => console.log('Connected to MongoDB successfully'))
 .catch(err => console.log(err))
-
-mongoose.set('bufferCommands', false)
 
 app.use(express.static('client/build'))
 app.get('*', (req, res) => {
