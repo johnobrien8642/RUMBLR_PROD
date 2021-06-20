@@ -69,6 +69,14 @@ const Feed = ({
   
   handleData(data, feedArr, cursorId, endOfPosts)
 
+  const handleFeedDivMessage = () => {
+    if (currentUser.userFollows.length === 0) {
+      return "You don't follow anyone yet"
+    } else if (currentUser.userFollows.length !== 0 && data.fetchUserFeed.length === 0) {
+      return "You're all caught up!"
+    }
+  }
+
   var handleLikesHeader = () => {
     if (userLikes) {
       return (
@@ -167,7 +175,7 @@ const Feed = ({
       <div
         id='fetchMoreFeed'
       >
-        {endOfPosts.current ? "You're all caught up" : ""}
+        {handleFeedDivMessage()}
       </div>
     </div>
   )

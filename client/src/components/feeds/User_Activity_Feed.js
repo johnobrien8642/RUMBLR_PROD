@@ -52,6 +52,14 @@ const UserActivityFeed = () => {
   
   handleData(data, feedArr, cursorId, endOfPosts)
 
+  const handleFeedDivMessage = (data) => {
+    if (data.fetchAllUserActivity.length === 0) {
+      return "You're all caught up!"
+    } else {
+      return ""
+    }
+  }
+
   return(
     <div
       className='activityFeed'
@@ -69,6 +77,7 @@ const UserActivityFeed = () => {
       <div
         id='fetchMoreActivity'
       >
+        {handleFeedDivMessage()}
       </div>
     </div>
   )

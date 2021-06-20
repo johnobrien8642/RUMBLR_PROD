@@ -271,6 +271,10 @@
         color: var(--tumblr-light-blue);
         font-size: 17px;
         margin: 25px 0 0 8px;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
 
       .profilePic {
