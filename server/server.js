@@ -30,17 +30,18 @@ mongoose
 .then(() => console.log('Connected to MongoDB successfully'))
 .catch(err => console.log(err))
 
-app.use(express.static('client/build'))
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
-})
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'))
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+  })
+}
 
 
 cronTagFollowerHeat.start()
 cronTagPostHeat.start()
 cronPostNotesHeat.start()
 cronUserPostingHeat.start()
-
   
 app.use(express.json())
 app.use('/api/posts', posts);
