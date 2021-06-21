@@ -19,7 +19,7 @@ const app = express();
 const __dirname = path.resolve(path.dirname(''))
 
 mongoose
-.connect(keys.mongoURL, { 
+.connect(keys.mongoURL, {
   useUnifiedTopology: true,
   useNewUrlParser: true,
   useCreateIndex: true,
@@ -31,10 +31,10 @@ mongoose
 .then(() => console.log('Connected to MongoDB successfully'))
 .catch(err => console.log(err))
 
-app.use(express.static('client/build'))
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
-})
+// app.use(express.static('client/build'))
+// app.get('*', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+// })
 
 
 cronTagFollowerHeat.start()
