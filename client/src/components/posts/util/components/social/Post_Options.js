@@ -1,6 +1,7 @@
 import React from 'react'; 
 import { useQuery } from '@apollo/client';
 import Cookies from 'js-cookie';
+import { useLocation } from 'react-router-dom';
 
 import LikeButton from './Like_Button'
 
@@ -24,7 +25,8 @@ const PostOptions = ({
   confirmDelete,
   setConfirmDelete
 }) => {
-  var postId = handlePostId(post)
+  var postId = handlePostId(post);
+  let location = useLocation();
 
   let { loading, error, data, refetch } = useQuery(DOES_USER_LIKE_POST,{
     variables: {
@@ -38,7 +40,10 @@ const PostOptions = ({
 
   const { doesUserLikePost } = data;
 
-  if (post.user.blogName === Cookies.get('currentUser')) {
+  if (
+      post.user.blogName === Cookies.get('currentUser') &&
+      location.pathname !== '/discover'
+    ) {
     return (
       <div
         className='postFooter'

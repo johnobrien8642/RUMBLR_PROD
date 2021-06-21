@@ -167,7 +167,6 @@ const Feed = ({
       <div
         id='fetchMoreFeed'
       >
-        {endOfPosts.current ? "You're all caught up" : ""}
       </div>
     </div>
   )
