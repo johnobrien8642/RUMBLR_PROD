@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useMutation } from '@apollo/client';
 import randomstring from 'randomstring';
 import Cookies from 'js-cookie';
+import { useHistory } from 'react-router-dom';
 
 import TextPostInput from '../../util/components/forms/inputTypes/Text_Post_Input'
 import BodyImageAndText from '../../util/components/forms/Body_Image_And_Text'
@@ -50,6 +51,7 @@ const TextPostForm = ({
   let [errMessage, setErrMessage] = useState('');
   let [render, setRender] = useState(0);
   let [confirmClose, setConfirmClose] = useState(false);
+  let history = useHistory();
   const formId = 'textPostForm'
   const formInputId = 'textPostInput'
 
@@ -299,6 +301,10 @@ const TextPostForm = ({
                   setPostFormModal(postFormModal = false)
                 }
 
+                if (mobile) {
+                  history.push('/')
+                }
+ 
                 setUploading(uploading = true)
               }}
             >

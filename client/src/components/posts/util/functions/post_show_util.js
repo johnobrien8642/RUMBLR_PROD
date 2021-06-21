@@ -402,7 +402,7 @@ const handleDemeterActivityPost = (activity) => {
 const PostShowUtil = { 
   postHeader, 
   postBody, 
-  repostFooter, 
+  repostFooter,
   postTags,
   handlePostClassName,
   handleDemeterActivityPost

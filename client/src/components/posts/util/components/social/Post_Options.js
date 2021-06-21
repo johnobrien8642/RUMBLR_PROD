@@ -8,7 +8,7 @@ import LikeButton from './Like_Button'
 import Queries from '../../../../../graphql/queries';
 import PostFormUtil from '../../functions/post_form_util.js';
 const { DOES_USER_LIKE_POST } = Queries;
-const { handlePostId } = PostFormUtil;
+const { handlePostId, preventScroll } = PostFormUtil;
 
 const PostOptions = ({ 
   post, 
@@ -51,6 +51,10 @@ const PostOptions = ({
         <div
           className='notesBtn'
           onClick={() => {
+            if (window.innerHeight < 980) {
+              preventScroll(document)
+            }
+            
             toggleNotes(notesActive, setNotesActive)
           }}
         >

@@ -10,7 +10,7 @@ const { postHeader, postBody, repostFooter, postTags } = PostShowUtil;
 const { FETCH_LIKES_REPOSTS_AND_COMMENTS } = Queries;
 
 const PostShow = ({ 
-  post, 
+  post,
   repost
 }) => {
   

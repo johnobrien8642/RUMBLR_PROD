@@ -11,10 +11,12 @@ import Queries from '../../../../../graphql/queries';
 import Mutations from '../../../../../graphql/mutations';
 import FeedUtil from '../../functions/feed_util.js';
 import UpdateCacheUtil from '../../functions/update_cache_util.js';
+import PostFormUtil from '../../functions/post_form_util.js';
 const { FETCH_LIKES_REPOSTS_AND_COMMENTS } = Queries;
 const { COMMENT_POST } = Mutations;
 const { handlePostNotesScrollOutOfWindow } = FeedUtil;
 const { commentPost } = UpdateCacheUtil;
+const { allowScroll } = PostFormUtil;
 
 const PostNotes = ({
   post,
@@ -95,7 +97,11 @@ const PostNotes = ({
             src="https://img.icons8.com/windows/64/000000/long-arrow-left.png"
             alt=''
             onClick={() => {
-              setNotesActive(notesActive = false)
+              if (window.innerHeight < 980) {
+                allowScroll(document)
+              }
+
+              setNotesActive(notesActive = false)              
             }}
           />
           <span>{notesCount} notes</span>
@@ -279,8 +285,6 @@ const PostNotes = ({
       </div>
     )
   }
-
-
 }
 
 export default PostNotes;
