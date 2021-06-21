@@ -6,6 +6,8 @@ import ProfilePic from '../user/util/components/Profile_Pic';
 
 const UserDetails = ({
   user,
+  navActive,
+  setNavActive,
   detailsClose,
   detailsOpen,
   setDetailsOpen
@@ -59,6 +61,9 @@ const UserDetails = ({
           <li>
             <Link
               to='/likes'
+              onClick={() => {
+                setNavActive(navActive = false)
+              }}
             >
               <img
                 className='detailIcon'
@@ -73,6 +78,9 @@ const UserDetails = ({
           <li>
             <Link 
               to='/following'
+              onClick={() => {
+                setNavActive(navActive = false)
+              }}
             >
               <img 
                 className='detailIcon'
@@ -87,6 +95,9 @@ const UserDetails = ({
           <li>
             <Link 
               to='/settings/account'
+              onClick={() => {
+                setNavActive(navActive = false)
+              }}
             >
               <img
                 className='detailIcon'
@@ -106,7 +117,10 @@ const UserDetails = ({
             className='blogDescription'
           > 
             <Link 
-              to={`/view/blog/${blogName}`}
+              to={`/view/blog/${blogName}`} 
+              onClick={() => {
+                setNavActive(navActive = false)
+              }}
             >
               <ProfilePic 
                 user={user}
@@ -123,6 +137,9 @@ const UserDetails = ({
             <Link
               className='blogDetailData'
               to={`/view/blog/${blogName}`}
+              onClick={() => {
+                setNavActive(navActive = false)
+              }}
             >
               <p>Posts</p>
             </Link>
@@ -133,6 +150,9 @@ const UserDetails = ({
             <Link
               className='blogDetailData'
               to='/followers'
+              onClick={() => {
+                setNavActive(navActive = false)
+              }}
             >
               <p>Followers</p>
             </Link>
@@ -143,6 +163,9 @@ const UserDetails = ({
             <Link
               className='blogDetailData'
               to='/activity'
+              onClick={() => {
+                setNavActive(navActive = false)
+              }}
             >
               <p>Activity</p>
             </Link>
@@ -158,5 +181,32 @@ const UserDetails = ({
     )
   }
 }
+
+// const handleByLine = (user) => {
+//   var words, descriptionArr = []
+
+//   if (user.blogDescription) {
+//     words = user.blogDescription.split(' ')
+    
+//     if (words.length > 8) {
+//       descriptionArr = words.slice(0, 8)
+
+//       return (
+//         <p>{descriptionArr.join(' ') + '...'}</p>
+//       )
+//     } else {
+//       descriptionArr = [...words]
+
+//       return (
+//         <p>{descriptionArr.join(' ')}</p>
+//       )
+//     }
+
+//   } else {
+//     return (
+//       <p></p>
+//     )
+//   }
+// }
 
 export default UserDetails;

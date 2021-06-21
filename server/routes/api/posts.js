@@ -1,16 +1,18 @@
 import mongoose from 'mongoose';
 import express from 'express';
-const router = express.Router();
 import multer from 'multer';
 import multers3 from 'multer-s3';
+import path from 'path';
+
 import aws from 'aws-sdk';
 import ogs from 'open-graph-scraper';
-import path from 'path';
 import keys from '../../config/keys.js'
+
 const Image = mongoose.model('Image')
 const Audio = mongoose.model('Audio')
 const Video = mongoose.model('Video')
 const __dirname = path.resolve();
+const router = express.Router();
 
 var s3Client = new aws.S3({
   secretAccessKey: keys.secretAccessKey,

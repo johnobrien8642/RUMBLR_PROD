@@ -17,6 +17,7 @@ const { IS_LOGGED_IN } = Queries;
 const { VERIFY_USER } = Mutations;
 
 const token = Cookies.get('auth-token');
+const port = process.env.PORT || 5000;
 
 const authLink = setContext((_, { headers }) => {
   return {
@@ -28,11 +29,10 @@ const authLink = setContext((_, { headers }) => {
 });
 
 const httpLink = new HttpLink({
-  uri: 'http://localhost:5000/graphql',
+  uri: `http://localhost:${port}/graphql`,
 });
 
 const errorLink = onError(({ graphQLErrors, networkError }) => {
-  console.log(graphQLErrors)
   if (graphQLErrors)
   graphQLErrors.forEach(({ message, locations, path }) =>
     console.log(

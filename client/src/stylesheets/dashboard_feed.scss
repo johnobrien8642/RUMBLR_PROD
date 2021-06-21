@@ -1,16 +1,5 @@
 .userOrTagFeed, .discoverFeed, .postShow, .postRadar {
 
-  #fetchMoreFeed, #fetchMoreActivity, 
-  #fetchMoreFollowedUsers, #fetchMoreFollowers {
-    height: 30px;
-    width: 100%;
-    text-align: center;
-    color: white;
-    font-size: 19px;
-    font-weight: 500;
-    margin-bottom: 5px;
-  }
-
   .userLikesHeader {
     background-color: var(--tumblr-translucent-blue);
     color: white;

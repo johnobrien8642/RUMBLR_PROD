@@ -9,11 +9,15 @@
     "client": "npm start --prefix client",
     "server": "nodemon index.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "npm install && cd client && npm install && npm run build && cd ckeditor5 && npm install && npm run build"
+    "build": "npm install && cd client npm install && cd ckeditor5 npm install",
+    "digitalocean-postbuild": "cd client npm run build && cd ckeditor5 npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/johnobrien8642/Rumblr_MERNG.git"
+  },
+  "engines": {
+    "node": ">=0.11.0 <15"
   },
   "author": "John O'Brien",
   "license": "ISC",
@@ -22,7 +26,12 @@
   },
   "homepage": "https://github.com/johnobrien8642/Rumblr_MERNG#readme",
   "dependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/node": "^7.13.10",
     "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-react": "^7.12.13",
     "apollo-server-express": "^2.21.1",
     "aws-sdk": "^2.864.0",
     "axios": "^0.21.1",
@@ -56,12 +65,5 @@
     "uuid": "^8.3.2",
     "validator": "^13.5.2",
     "ws": "^6.2.1"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.13.10",
-    "@babel/core": "^7.13.10",
-    "@babel/node": "^7.13.10",
-    "@babel/preset-env": "^7.13.10",
-    "@babel/preset-react": "^7.12.13"
   }
 }
