@@ -103,7 +103,7 @@ const mutation = new GraphQLObjectType({
           post,
           s3Client,
           keys,
-          handleS3AndObjectCleanup
+          handles3AndObjectCleanup
         )
       }
     },
