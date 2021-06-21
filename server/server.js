@@ -18,7 +18,7 @@ const { cronTagFollowerHeat,
 const app = express();
 
 mongoose
-.connect(keys.mongoURL, { 
+.connect(keys.mongoURL, {
   useUnifiedTopology: true,
   useNewUrlParser: true,
   useCreateIndex: true,
@@ -31,6 +31,7 @@ mongoose
 .catch(err => console.log(err))
 
 if (process.env.NODE_ENV === 'production') {
+  console.log(process.env.NODE_ENV)
   app.use(express.static('client/build'))
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
