@@ -26,57 +26,76 @@ const PostRadar = () => {
   const { fetchPostRadar } = data;
 
   if (fetchPostRadar) {
-    return (
-      <div
-        className='postRadar'
-      >
-        <h1 className='radarHeader'>Radar</h1>
+    if (fetchPostRadar.kind === 'Repost') {
+      return (
         <div
-          className={handlePostClassName(fetchPostRadar)}
+          className='postRadar'
         >
-
-        <div
-          className='userRepostShowHeader'
-        >
-          <ProfilePic
-            user={fetchPostRadar.post.user}
-          />
-          <span
-            className='repostHeaderContainer'
+          <h1 className='radarHeader'>Radar</h1>
+          <div
+            className={handlePostClassName(fetchPostRadar)}
           >
-            <Link 
-              className='user'
-              to={`/view/blog/${fetchPostRadar.user.blogName}`}>
-              {fetchPostRadar.user.blogName}
-            </Link>
-            <div
-              className='iconRepostedAndFollowContainer'
+  
+          <div
+            className='userRepostShowHeader'
+          >
+            <ProfilePic
+              user={fetchPostRadar.post.user}
+            />
+            <span
+              className='repostHeaderContainer'
             >
-              <img
-                src="https://img.icons8.com/material-two-tone/24/ffffff/retweet.png"
-                alt=''
-              />
-              <Link
-                className='repostedFrom'
-                to={`/view/blog/${fetchPostRadar.repostedFrom.blogName}`}
-              >
+              <Link 
+                className='user'
+                to={`/view/blog/${fetchPostRadar.user.blogName}`}>
                 {fetchPostRadar.user.blogName}
               </Link>
-              <FollowButton
-                feed={true}
-                user={fetchPostRadar.repostedFrom}
-              />
-            </div>
-          </span>
+              <div
+                className='iconRepostedAndFollowContainer'
+              >
+                <img
+                  src="https://img.icons8.com/material-two-tone/24/ffffff/retweet.png"
+                  alt=''
+                />
+                <Link
+                  className='repostedFrom'
+                  to={`/view/blog/${fetchPostRadar.repostedFrom.blogName}`}
+                >
+                  {fetchPostRadar.user.blogName}
+                </Link>
+                <FollowButton
+                  feed={true}
+                  user={fetchPostRadar.repostedFrom}
+                />
+              </div>
+            </span>
+          </div>
+            <PostShow
+              feedOrRadar={true}
+              post={fetchPostRadar}
+              radar={true}
+            />
+          </div>
         </div>
-          <PostShow
-            feedOrRadar={true}
-            post={fetchPostRadar}
-            radar={true}
-          />
+      )
+    } else {
+      return (
+        <div
+          className='postRadar'
+        >
+          <h1 className='radarHeader'>Radar</h1>
+          <div
+            className={handlePostClassName(fetchPostRadar)}
+          >
+            <PostShow
+              feedOrRadar={true}
+              post={fetchPostRadar}
+              radar={true}
+            />
+          </div>
         </div>
-      </div>
-    )
+      )
+    }
   } else {
     return (
       <div
