@@ -57,6 +57,7 @@
     .recommendedTagsContainer {
       display: flex;
       flex-direction: space-between;
+      min-height: 100px;
   
       .recommendedTags {
         display: flex;
