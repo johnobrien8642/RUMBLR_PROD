@@ -1,6 +1,6 @@
 export default {
-  localIP: process.env.localIP,
-  accessKeyId: process.env.accessKeyId,
-  secretAccessKey: process.env.secretAccessKey,
-  bucket: process.env.bucket
+  localIP: process.env.LOCAL_IP,
+  accessKeyId: process.env.ACCESS_KEY_ID,
+  secretAccessKey: process.env.SECRET_ACCESS_KEY,
+  bucket: process.env.BUCKET
 }

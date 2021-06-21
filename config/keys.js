@@ -1,6 +1,6 @@
 export default {
-  secretOrKey: process.env.secretOrKey,
-  emailAuthToken: process.env.emailAuthToken,
-  hostEmail: process.env.hostEmail,
-  hostPassword: process.env.hostPassword
+  secretOrKey: process.env.SECRET_OR_KEY,
+  emailAuthToken: process.env.EMAIL_AUTH_TOKEN,
+  hostEmail: process.env.HOST_EMAIL,
+  hostPassword: process.env.HOST_PASSWORD
 }
