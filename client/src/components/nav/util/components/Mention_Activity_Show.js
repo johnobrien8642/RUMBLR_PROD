@@ -9,7 +9,7 @@ const { handleByline } = BylineUtil;
 
 
 const MentionShow = ({
-  dropdown, mention, navActive, setNavActive
+  dropdown, mention, active, setActive
 }) => {
 
   if (mention.post) {
@@ -18,7 +18,7 @@ const MentionShow = ({
         className='activityResult'
         onClick={() => {
           if (dropdown) {
-            setNavActive(navActive = false)
+            setActive(active = false)
           }
         }}
       >

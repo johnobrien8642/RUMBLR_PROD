@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import ProfilePic from '../../../user/util/components/Profile_Pic';
 
 const FollowerActivityShow = ({
-  dropdown, follow, navActive, setNavActive
+  dropdown, follow, active, setActive
 }) => {
 
   if (follow) {
@@ -13,7 +13,7 @@ const FollowerActivityShow = ({
         className='activityResult'
         onClick={() => {
           if (dropdown) {
-            setNavActive(navActive = false)
+            setActive(active = false)
           }
         }}
       >

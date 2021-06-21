@@ -9,7 +9,7 @@ import BylineUtil from '../byline_util.js';
 const { handleByline } = BylineUtil;
 
 const CommentShow = ({
-  dropdown, comment, navActive, setNavActive
+  dropdown, comment, active, setActive
 }) => {
   
   if (comment.post) {
@@ -18,7 +18,7 @@ const CommentShow = ({
         className='activityResult'
         onClick={() => {
           if (dropdown) {
-            setNavActive(navActive = false)
+            setActive(active = false)
           }
         }}
       >

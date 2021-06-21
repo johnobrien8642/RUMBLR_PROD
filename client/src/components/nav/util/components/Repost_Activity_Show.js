@@ -10,7 +10,7 @@ const { handleByline } = BylineUtil;
 
 
 const RepostActivityShow = ({
-  dropdown, repost, navActive, setNavActive
+  dropdown, repost, active, setActive
 }) => {
   
   if (repost.post) {
@@ -27,7 +27,7 @@ const RepostActivityShow = ({
         className='activityResult'
         onClick={() => {
           if (dropdown) {
-            setNavActive(navActive = false)
+            setActive(active = false)
           }
         }}
       >
