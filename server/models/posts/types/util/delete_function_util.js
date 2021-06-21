@@ -77,7 +77,7 @@ const handleS3Cleanup = async (obj, s3Client, keys) => {
 
 const handles3AndObjectCleanup = async (objsToClean, s3Client, keys) => {
   var filteredObjs = objsToClean.filter(obj => obj.key)
-
+  
   var s3ObjectKeys = filteredObjs.map(obj => {
     if (obj.kind !== 'Mention') {
       return { Key: obj.key }
@@ -131,9 +131,9 @@ const asyncDeleteAllPosts = async (
 ) => {
   for (let i = 0; i < posts.length; i++) {
     await deletePost(
-      posts[i], 
+      posts[i],
       s3Client, 
-      keys, 
+      keys,
       handles3AndObjectCleanup
     )
   }
@@ -149,7 +149,7 @@ const asyncDeleteAllActivityAndProfilePic = async (user) => {
 
 const deletePost = async (
   post, 
-  s3Client, 
+  s3Client,
   keys, 
   handles3AndObjectCleanup
 ) => {

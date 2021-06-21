@@ -45,9 +45,9 @@ const Nav = () => {
       if (loading1 || loading2) return 'Loading...';
       
       if (error1) {
-        return `Details Counts Error: ${error1}`
+        return `Error: ${error1}`
       } else if (error2) {
-        return `Is Logged In Error: ${error2}`
+        return `Error: ${error2}`
       }
 
   return (

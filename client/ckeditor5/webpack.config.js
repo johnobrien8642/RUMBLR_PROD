@@ -7,17 +7,17 @@
 
 /* eslint-env node */
 
-const path = require( 'path' );
-const webpack = require( 'webpack' );
-const { bundler, styles } = require( '@ckeditor/ckeditor5-dev-utils' );
-const CKEditorWebpackPlugin = require( '@ckeditor/ckeditor5-dev-webpack-plugin' );
-const TerserWebpackPlugin = require( 'terser-webpack-plugin' );
+// const path = require( 'path' );
+// const webpack = require( 'webpack' );
+// const { bundler, styles } = require( '@ckeditor/ckeditor5-dev-utils' );
+// const CKEditorWebpackPlugin = require( '@ckeditor/ckeditor5-dev-webpack-plugin' );
+// const TerserWebpackPlugin = require( 'terser-webpack-plugin' );
 
-// import path from 'path';
-// import webpack from 'webpack';
-// import { bundler, styles } = require( '@ckeditor/ckeditor5-dev-utils' );
-// import CKEditorWebpackPlugin = require( '@ckeditor/ckeditor5-dev-webpack-plugin' );
-// import TerserWebpackPlugin = require( 'terser-webpack-plugin' );
+import path from 'path' ;
+import webpack from 'webpack';
+import { bundler, styles } from '@ckeditor/ckeditor5-dev-utils';
+import CKEditorWebpackPlugin from '@ckeditor/ckeditor5-dev-webpack-plugin';
+import TerserWebpackPlugin from 'terser-webpack-plugin';
 
 module.exports = {
 	devtool: 'source-map',

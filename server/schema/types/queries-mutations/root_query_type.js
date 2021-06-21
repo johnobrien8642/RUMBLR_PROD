@@ -237,7 +237,6 @@ const RootQueryType = new GraphQLObjectType({
       },
       resolve(_, { query, cursorId }) {
         return User.findOne({ blogName: query })
-          .populate('tagFollows')
           .then(user => {
             return Follow.find({ user: user, onModel: 'User' })
               .then(follows => {

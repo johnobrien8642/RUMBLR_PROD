@@ -21,7 +21,7 @@ const UserBlogShow = () => {
 
   if (loading) return 'Loading...';
   if (error) return `Error: ${error}`;
-  
+
   return (
     <div
       className='userBlogFeedContainer'
