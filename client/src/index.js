@@ -19,7 +19,7 @@ const { VERIFY_USER } = Mutations;
 const token = Cookies.get('auth-token');
 console.log(process.env.PORT)
 console.log(process.env)
-const port = process.env.PORT || 5000;
+const port = 8080;
 
 const authLink = setContext((_, { headers }) => {
   return {
