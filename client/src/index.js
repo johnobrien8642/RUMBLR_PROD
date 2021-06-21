@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { ApolloClient, InMemoryCache,
           ApolloProvider, HttpLink } from '@apollo/client';
-import { HashRouter } from 'react-router-dom';
+import { HashRouter, BrowserRouter } from 'react-router-dom';
 import { onError } from '@apollo/client/link/error';
 import { setContext } from '@apollo/client/link/context';
 import Cookies from 'js-cookie';
@@ -213,9 +213,9 @@ if (token) {
 const Root = () => {
   return (
     <ApolloProvider client={client}>
-      <HashRouter>
+      <BrowserRouter>
         <App />
-      </HashRouter>
+      </BrowserRouter>
     </ApolloProvider>
   )
 }
