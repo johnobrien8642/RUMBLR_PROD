@@ -50,7 +50,7 @@ app.use(expressCspHeader({
     'frame-ancestors': [SELF, 'https://open.spotify.com/', 'soundcloud.com']
   }
 }))
-app.use(cors());
+app.use(cors({ credentials: true, origin: true }));
 app.use(
   '/graphql',
   graphqlHTTP({
