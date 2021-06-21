@@ -118,6 +118,10 @@
       }
     }
 
+    .descriptionTextAndImage div:last-of-type {
+      margin-bottom: 10px;
+    }
+
     .postTags {
       position: relative;
       display: flex;
