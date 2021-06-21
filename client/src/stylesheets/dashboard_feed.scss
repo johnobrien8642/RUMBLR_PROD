@@ -459,9 +459,8 @@
       .likeBtn {
         width: 32px;
         height: 32px;
-        margin: 0 15px 0 0;
 
-        @media (max-width: 1024px) {
+        @media (max-width: 980px) {
           width: 30px;
           height: 30px;
         }
