@@ -21,7 +21,7 @@ import { GraphQLJSONObject } from 'graphql-type-json';
 const { deletePost, 
         asyncDeleteAllPosts, 
         asyncDeleteAllActivityAndProfilePic,
-        handleS3Cleanup } = DeleteFunctionUtil;
+        handleS3Cleanup, handles3AndObjectCleanup } = DeleteFunctionUtil;
 
 const Post = mongoose.model('Post');
 const User = mongoose.model('User');
@@ -99,7 +99,12 @@ const mutation = new GraphQLObjectType({
         post: { type: GraphQLJSONObject }
       },
       resolve(_, { post }) {
-        return deletePost(post)
+        return deletePost(
+          post,
+          s3Client,
+          keys,
+          handleS3AndObjectCleanup
+        )
       }
     },
     likePost: {
