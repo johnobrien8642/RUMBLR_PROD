@@ -21,8 +21,7 @@ import { GraphQLJSONObject } from 'graphql-type-json';
 const { deletePost, 
         asyncDeleteAllPosts, 
         asyncDeleteAllActivityAndProfilePic,
-        handleS3Cleanup,
-        handles3AndObjectCleanup } = DeleteFunctionUtil;
+        handleS3Cleanup } = DeleteFunctionUtil;
 
 const Post = mongoose.model('Post');
 const User = mongoose.model('User');
@@ -37,8 +36,8 @@ const { GraphQLObjectType, GraphQLID,
         GraphQLString, GraphQLList, GraphQLInt } = graphql;
 
 var s3Client = new aws.S3({
-  accessKeyId: keys.accessKeyId,
   secretAccessKey: keys.secretAccessKey,
+  accessKeyId: keys.accessKeyId,
   region: 'us-east-1'
 })
 
@@ -100,12 +99,7 @@ const mutation = new GraphQLObjectType({
         post: { type: GraphQLJSONObject }
       },
       resolve(_, { post }) {
-        return deletePost(
-          post,
-          s3Client,
-          handles3AndObjectCleanup,
-          keys
-        )
+        return deletePost(post)
       }
     },
     likePost: {
@@ -593,8 +587,8 @@ const mutation = new GraphQLObjectType({
                 { $replaceRoot: { "newRoot": "$posts" } }
               ]).then(posts => {
                 return Promise.all([
-                  asyncDeleteAllPosts(posts, deletePost, s3Client, handles3AndObjectCleanup, keys),
-                  asyncDeleteAllActivityAndProfilePic(user, s3Client, handles3Cleanup, keys)
+                  asyncDeleteAllPosts(posts, deletePost, s3Client, keys),
+                  asyncDeleteAllActivityAndProfilePic(user)
                 ]).then(() => {
                   return AuthService.logout(token)
                     .then(() => {

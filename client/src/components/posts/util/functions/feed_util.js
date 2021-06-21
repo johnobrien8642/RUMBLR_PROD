@@ -32,7 +32,7 @@ const infiniteScroll = (
         var elBottom = el.bottom
         var innerHeight = window.innerHeight
         
-        if (elBottom <= innerHeight + 150) {
+        if (elTop >= 0 && elBottom <= innerHeight) {
           client.query({
             query: gqlQuery.current,
             variables: {

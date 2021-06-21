@@ -1,7 +1,7 @@
-// import keys_prod from './keys_prod.js';
-// var keys_dev = process.env.NODE_ENV === 'production' ? {} : import(keys_dev);
+// import keys_prod from './keys_prod.js'
+// import keys_dev from './keys_dev.js'
 
-// export default process.env.NODE_ENV === 'production' ? keys_prod : keys_dev;
+// export default process.env.NODE_ENV === 'development' ? keys_dev : keys_prod;
 
 export default {
   localIP: process.env.LOCAL_IP,

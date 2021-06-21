@@ -7,7 +7,7 @@
   "scripts": {
     "client-install": "npm install --prefix client",
     "client": "npm start --prefix client",
-    "server": "NODE_ENV='development' nodemon index.js",
+    "server": "nodemon index.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "build": "npm install && cd client npm install && cd ckeditor5 npm install",
     "digitalocean-postbuild": "cd client npm run build && cd ckeditor5 npm run build"

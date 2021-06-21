@@ -19,6 +19,7 @@ var s3Client = new aws.S3({
 })
 
 const handlePostDelete = async (post) => {
+
   if (post.kind === 'Repost') {
     return Post.findById(post.post._id)
       .then(repostedPost => {
@@ -35,6 +36,7 @@ const handlePostDelete = async (post) => {
   } else {
     return Promise.all([
       Post.deleteOne({ _id: post._id }),
+      
       Like.deleteMany({ post: post._id }),
       Comment.deleteMany({ post: post._id }),
       Mention.deleteMany({ post: post._id }),
@@ -91,8 +93,7 @@ const handles3AndObjectCleanup = async (objsToClean, s3Client, keys) => {
 
   if (s3ObjectKeys.length > 0) {
     await s3Client.deleteObjects(params, function(err, data) {
-      // if (data.Errors.length > 0) console.log(`s3 delete err: ${err}, stack: ${err.stack}`)
-      if (data) console.log(data)
+      if (err) console.log(`s3 delete err: ${err}, stack: ${err.stack}`)
     })
   }
 
@@ -124,22 +125,21 @@ const cleanupMention = async (mentionObjs) => {
 const asyncDeleteAllPosts = async (
   posts, 
   deletePost,
-  s3Client,
-  handles3AndObjectCleanup,
-  keys
+  s3Client, 
+  keys,
+  handles3AndObjectCleanup
 ) => {
   for (let i = 0; i < posts.length; i++) {
     await deletePost(
-      posts[i],
-      s3Client,
-      handles3AndObjectCleanup,
-      keys
+      posts[i], 
+      s3Client, 
+      keys, 
+      handles3AndObjectCleanup
     )
   }
 }
 
-const asyncDeleteAllActivityAndProfilePic = async (user, s3Client, handleS3Cleanup, keys) => {
-  await handleS3Cleanup(user.profilePic, s3Client, keys)
+const asyncDeleteAllActivityAndProfilePic = async (user) => {
   await Image.deleteOne({ _id: user.profilePic })
   await Like.deleteMany({ user: user._id })
   await Comment.deleteMany({ user: user._id })
@@ -148,10 +148,10 @@ const asyncDeleteAllActivityAndProfilePic = async (user, s3Client, handleS3Clean
 }
 
 const deletePost = async (
-  post,
-  s3Client,
-  handles3AndObjectCleanup,
-  keys
+  post, 
+  s3Client, 
+  keys, 
+  handles3AndObjectCleanup
 ) => {
   if
     (
