@@ -9,7 +9,7 @@
     "client": "npm start --prefix client",
     "server": "nodemon index.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "npm install && cd client && npm install && npm run build && cd ckeditor5 && npm install"
+    "build": "npm install && cd client && npm install && npm run build && cd ckeditor5 && npm install && npm run build"
   },
   "repository": {
     "type": "git",
