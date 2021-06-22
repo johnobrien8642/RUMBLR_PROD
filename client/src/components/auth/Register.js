@@ -33,7 +33,8 @@ const Register = () => {
             errMessage: error.message
           }
         })
-      } else { 
+      } else {
+        addErrorMessage(errorMessages = [])
         error.graphQLErrors.forEach((error, i) => {
           addErrorMessage(errorMessages.concat(error.message))
         })
@@ -105,18 +106,20 @@ const Register = () => {
           }}
         >
 
-        <ul>
-          {errorMessages.map((error, i) => {
-            return <li key={i}>{error}</li>
-          })}
-        </ul>
-
         <PhotoPostOrRegisterPhotoInput 
           register={true}
           previewProfilePicRef={previewProfilePicRef}
           profileImageFile={profileImageFile}
           setProfileImageFile={setProfileImageFile}
         />
+
+        <ul
+          className='authErrors'
+        >
+          {errorMessages.map((error, i) => {
+            return <li key={i}>{error}</li>
+          })}
+        </ul>
 
         <input
           type='text'

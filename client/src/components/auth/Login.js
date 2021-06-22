@@ -9,9 +9,9 @@ const { LOGIN_USER } = Mutations;
 const { IS_LOGGED_IN } = Queries;
 
 const Login = () => {
-  let [ email, setEmail ] = useState('');
-  let [ password, setPassword ] = useState('');
-  let [ errorMessages, addErrorMessage ] = useState([]);
+  let [email, setEmail] = useState('');
+  let [password, setPassword] = useState('');
+  let [errorMessages, addErrorMessage] = useState([]);
   const location = useLocation();
   
   useEffect(() => {
@@ -23,6 +23,7 @@ const Login = () => {
   
   const [ loginUser ] = useMutation(LOGIN_USER, {
     onError(error) {
+      addErrorMessage(errorMessages = [])
       error.graphQLErrors.forEach((error, i) => {
         addErrorMessage(errorMessages.concat(error.message))
       })
@@ -82,7 +83,9 @@ const Login = () => {
         }}
       >
 
-        <ul>
+        <ul
+          className='authErrors'
+        >
           {errorMessages.map((error, i) => {
             return <li key={i}>{error}</li>
           })}

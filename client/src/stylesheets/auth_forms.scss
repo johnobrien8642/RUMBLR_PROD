@@ -9,6 +9,14 @@
   font-family: 'Noto Sans JP', sans-serif;
   color: var(--mid-gray);
 
+  .authErrors {
+
+    li {
+      text-align: center;
+      color: white;
+    }
+  }
+
   .profilePicPreview {
     
     .previewImg {
