@@ -574,7 +574,7 @@ const RootQueryType = new GraphQLObjectType({
                       $and:
                       [
                         { $gt: [ "$createdAt", "$$cursorId"]},
-                        { $eq: [ "$repostedFrom", "$$userId" ] },
+                        { $eq: [ "$postAuthor", "$$userId" ] },
                         { $eq: [ "$kind", "$$kind" ] },
                       ]
                     }
@@ -594,7 +594,7 @@ const RootQueryType = new GraphQLObjectType({
                       $and:
                       [
                         { $gt: [ "$createdAt", "$$cursorId"]},
-                        { $eq: [ "$user", "$$userId" ] },
+                        { $eq: [ "$user", "$$postAuthorId" ] },
                       ]
                     }
                   }
@@ -613,7 +613,7 @@ const RootQueryType = new GraphQLObjectType({
                       $and:
                       [
                         { $gt: [ "$createdAt", "$$cursorId"]},
-                        { $eq: [ "$user", "$$userId" ] },
+                        { $eq: [ "$user", "$$postAuthor" ] },
                       ]
                     }
                   }
