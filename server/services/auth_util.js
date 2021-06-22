@@ -17,11 +17,11 @@ const register = async (data, ctx) => {
   }
   const { profilePicId, blogName, blogDescription, email, password } = data;
 
-  const uniqBlogName = await User.findOne({ blogName })
+  const notUniqBlogName = await User.findOne({ blogName })
   
   const existingUser = await User.findOne({ email })
 
-  if (!uniqBlogName) {
+  if (notUniqBlogName) {
     throw new Error('Blog Name already taken')
   }
 
