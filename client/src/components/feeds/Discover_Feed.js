@@ -9,7 +9,7 @@ import FollowButton from '../posts/util/components/social/Follow_Button';
 
 import PostShowUtil from '../posts/util/functions/post_show_util.js';
 import Queries from '../../graphql/queries.js';
-const { FETCH_ALL_TAG_FEED } = Queries;
+const { FETCH_DISCOVER_FEED } = Queries;
 const { handlePostClassName } = PostShowUtil;
 
 const AllTagFeed = ({
@@ -26,7 +26,7 @@ const AllTagFeed = ({
     //eslint-disable-next-line
   }, [])
   
-  let { loading, error, data, refetch } = useQuery(FETCH_ALL_TAG_FEED, {
+  let { loading, error, data, refetch } = useQuery(FETCH_DISCOVER_FEED, {
     variables: {
       query: Cookies.get('currentUser')
     }
@@ -35,11 +35,11 @@ const AllTagFeed = ({
   if (loading) return '';
   if (error) return `Error: ${error.message}`;
   
-  const { fetchAllTagFeed } = data;
+  const { fetchDiscoverFeed } = data;
   
-  if (fetchAllTagFeed) {
-    leftFeedArr.current = fetchAllTagFeed.slice(0, (fetchAllTagFeed.length / 2))
-    rightFeedArr.current = fetchAllTagFeed.slice((fetchAllTagFeed.length / 2), fetchAllTagFeed.length)
+  if (fetchDiscoverFeed) {
+    leftFeedArr.current = fetchDiscoverFeed.slice(0, (fetchDiscoverFeed.length / 2))
+    rightFeedArr.current = fetchDiscoverFeed.slice((fetchDiscoverFeed.length / 2), fetchDiscoverFeed.length)
   }
 
   return(

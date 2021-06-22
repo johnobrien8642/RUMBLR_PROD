@@ -183,6 +183,8 @@
       margin: 0 0 5px 0;
 
       .profilePic {
+        position: relative;
+        top: 10px;
         width: 38px;
         height: 42px;
         margin: 10px 0 5px 10px;
@@ -199,7 +201,7 @@
 
       p {
         font-size: 13px;
-        width: 90%;
+        width: 210px;
         margin: 3px 0 0 5px;
       }
     

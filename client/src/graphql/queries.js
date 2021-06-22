@@ -545,9 +545,9 @@ const Queries = {
       }
     }
   `,
-  FETCH_ALL_TAG_FEED: gql`
-    query FetchAllTagFeed($query: String) {
-      fetchAllTagFeed(query: $query) {
+  FETCH_DISCOVER_FEED: gql`
+    query FetchDiscoverFeed($query: String) {
+      fetchDiscoverFeed(query: $query) {
         __typename
         ... on RepostType {
           _id

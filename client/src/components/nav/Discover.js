@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/client';
 import Cookies from 'js-cookie';
 
 import RecommendedTags from '../nav/Recommended_Tags';
-import AllTagFeed from '../feeds/All_Tag_Feed';
+import DiscoverFeed from '../feeds/Discover_Feed';
 import FollowedTags from '../search/resultTypes/Followed_Tags_Result';
 
 import Queries from '../../graphql/queries.js';
@@ -43,7 +43,7 @@ const Discover = () => {
         
       </div>
 
-      <AllTagFeed 
+      <DiscoverFeed
         currentUser={user.user}
       />
 
