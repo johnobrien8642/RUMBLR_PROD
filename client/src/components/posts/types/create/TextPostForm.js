@@ -300,10 +300,6 @@ const TextPostForm = ({
                 if (!update) {
                   setPostFormModal(postFormModal = false)
                 }
-
-                if (mobile) {
-                  history.push('/')
-                }
  
                 setUploading(uploading = true)
               }}
