@@ -46,15 +46,13 @@ const PostNotes = ({
     }
   }, [notesActive, setNotesActive])
 
-  useEffect(() => {
-    if (notesActive) {
-      preventScroll(notesActive, document)
-    }
+  // useEffect(() => {
+  //   preventScroll(notesActive, document)
 
-    return () => {
-      allowScroll(document)
-    }
-  }, [notesActive, setNotesActive])
+  //   return () => {
+  //     allowScroll(document)
+  //   }
+  // }, [notesActive, setNotesActive])
 
   let [comment] = useMutation(COMMENT_POST, {
     update(client, { data }) {
