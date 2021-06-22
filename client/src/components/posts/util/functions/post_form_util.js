@@ -872,14 +872,12 @@ function MentionCustomization( editor ) {
 
 const preventScroll = (activeVar, document) => {
   if (activeVar) {
-    document.body.style.position = 'fixed'
     document.body.style.height = '100%'
     document.body.style.overflow = 'hidden'
   }
 }
 
 const allowScroll = (document) => {
-  document.body.style.position = ''
   document.body.style.height = ''
   document.body.style.overflow = ''
 }
