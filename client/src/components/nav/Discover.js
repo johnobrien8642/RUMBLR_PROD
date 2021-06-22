@@ -43,7 +43,9 @@ const Discover = () => {
         
       </div>
 
-      <AllTagFeed />
+      <AllTagFeed 
+        currentUser={user.user}
+      />
 
       <div
         className='followedTagsContainer'

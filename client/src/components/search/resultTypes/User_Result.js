@@ -36,7 +36,7 @@ const UserResult = ({
           {handleDescription()}
         </Link>
       </div>
-      <FollowButton 
+      <FollowButton
         user={user}
       />
     </React.Fragment>

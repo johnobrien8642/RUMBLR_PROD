@@ -5,6 +5,7 @@ import Cookies from 'js-cookie';
 
 import ProfilePic from '../user/util/components/Profile_Pic';
 import PostShow from '../posts/types/showOrUpdate/PostShow';
+import FollowButton from '../posts/util/components/social/Follow_Button';
 
 import PostShowUtil from '../posts/util/functions/post_show_util.js';
 import Queries from '../../graphql/queries.js';
@@ -61,14 +62,18 @@ const AllTagFeed = ({
                 <ProfilePic
                   user={post.user}
                 />
-                <span>
+                <span
+                  className='repostHeaderContainer'
+                >
                   <Link 
                     className='user'
                     to={`/view/blog/${Cookies.get('currentUser')}`}>
                     {Cookies.get('currentUser')}
                   </Link>
 
-                  <div>
+                  <div
+                    className='iconRepostedAndFollowContainer'
+                  >
                     <img
                       src="https://img.icons8.com/material-two-tone/24/ffffff/retweet.png"
                       alt=''
@@ -79,6 +84,10 @@ const AllTagFeed = ({
                     >
                       {post.user.blogName}
                     </Link>
+                    <FollowButton
+                      feed={true}
+                      user={post.repostedFrom}
+                    />
                   </div>
                 </span>
               </div>
