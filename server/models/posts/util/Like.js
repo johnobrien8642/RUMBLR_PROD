@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 const LikeSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,
-    ref: 'User'
+    ref: 'User',
+    index: true
   },
   post: {
     type: Schema.Types.ObjectId,
@@ -12,7 +13,8 @@ const LikeSchema = new Schema({
   },
   postAuthor: {
     type: Schema.Types.ObjectId,
-    ref: 'User'
+    ref: 'User',
+    index: true
   },
   createdAt: {
     type: Date,

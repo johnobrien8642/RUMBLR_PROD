@@ -6,7 +6,8 @@ const options = { discriminatorKey: 'kind' }
 const PostSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,
-    ref: 'User'
+    ref: 'User',
+    index: true
   },
   allText: {
     type: String

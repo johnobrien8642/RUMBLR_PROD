@@ -14,7 +14,7 @@ const { cronTagFollowerHeat,
         cronPostNotesHeat,
         cronTagPostHeat,
         cronUserPostingHeat } = CronUtil;
-
+global.__dirname = path.resolve('./')
 const app = express();
 
 mongoose

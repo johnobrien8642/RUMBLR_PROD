@@ -16,8 +16,14 @@ const register = async (data, ctx) => {
     throw new Error(message)
   }
   const { profilePicId, blogName, blogDescription, email, password } = data;
+
+  const uniqBlogName = await User.findOne({ blogName })
   
   const existingUser = await User.findOne({ email })
+
+  if (!uniqBlogName) {
+    throw new Error('Blog Name already taken')
+  }
 
   if (existingUser) {
     throw new Error('Account already exists with that email')

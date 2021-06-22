@@ -8,7 +8,8 @@ const UserSchema = new Schema({
   },
   blogName: {
     type: String, 
-    required: true
+    required: true,
+    index: true
   },
   blogDescription: {
     type: String

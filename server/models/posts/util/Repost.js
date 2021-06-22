@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 const RepostSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,
-    ref: 'User'
+    ref: 'User',
+    index: true
   },
   postId: {
     type: Schema.Types.ObjectId

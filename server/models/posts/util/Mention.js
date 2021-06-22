@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 const MentionSchema = new Schema({
   mention: {
     type: Schema.Types.ObjectId,
-    ref: 'User'
+    ref: 'User',
+    index: true
 },
   user: {
     type: Schema.Types.ObjectId,
