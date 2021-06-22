@@ -1,5 +1,4 @@
 .post {
-
   .repostModal.none {
     position: static;
 
@@ -1014,6 +1013,180 @@
           display: none;
         }
       }
+  }
+
+  .linkPostForm {
+    .linkContainer {
+      position: relative;
+      width: 90%;
+      margin: 0 auto;
+      border: 1px solid rgb(0, 0, 0, 0.3);
+      border-radius: 10px;
+      overflow: hidden;
+      z-index: 94;
+      
+      .imgContainer {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 98;
+
+        .imgModal {
+          position: absolute;
+          background-color: rgb(0, 0, 0, 0.4);
+          width: 100%;
+          height: fit-content;
+          z-index: 98;  
+        }
+
+        .siteImage {
+          display: block;
+          position: relative;
+          object-fit: contain;
+          width: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 94;         
+        }
+
+        .siteTitle {
+          display: block;
+          position: relative;
+          top: -175px;
+          width: 400px;
+          background-color: rgb(0, 0, 0, 0.5);
+          border-radius: 3px;
+          overflow-y: hidden;
+
+          @media (max-width: 980px) {
+            width: 100%;
+          }
+          
+          text-align: center;
+          margin: 0 auto;
+          font-size: 22px;
+          font-weight: 500;
+          font-size: 120%;
+          color: white;
+          z-index: 96;
+        }
+      }
+
+      .siteDescription {
+        position: relative;
+        top: -50px;
+        font-size: 15px;
+        margin: 35px 15px -5px 15px;
+      }
+
+      .siteName {
+        display: block;
+        margin: 0 0 10px 15px;
+        font-size: 15px;
+        color:rgb(0, 0, 0, 0.5);
+      }
+
+      a {
+        position: relative;
+        margin: 0 auto;
+        color: inherit;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .linkPostForm {
+
+    .linkPreviewContainer {
+      width: 100%;
+
+      .linkNameAndImageContainer {
+
+        a {
+          width: 100%;
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          .siteName {
+            position: relative;
+            top: 35px;
+            color: white;
+            font-weight: 500;
+          }
+        }
+
+        img {
+          object-fit: contain;
+          width: 100%;
+          border-top: 1px solid rgb(0, 0, 0, 0.3);
+          border-bottom: 1px solid rgb(0, 0, 0, 0.3);
+        }
+      }
+
+      .linkTitleAndDescContainer {
+        background-color: var(--light-gray);
+
+        h2 {
+          position: relative;
+          top: -15px;
+          margin-left: 20px;
+          font-size: 18px;
+          font-weight: 700;
+          width: fit-content;
+          color: rgb(0, 0, 0, 0.7)
+        }
+
+        p {
+          display: inline-block;
+          width: 85%;
+          margin: 0 0 20px 20px;
+          font-size: 15px; 
+        }
+      }
+
+      .linkNameAndImageContainer,
+      .linkTitleAndDescContainer {
+
+        &:focus {
+          .removeBtn {
+            transform: scale(1);
+          }
+        }
+
+        &:hover {
+          .removeBtn {
+            transform: scale(1);
+          }
+        }
+
+        .removeBtn {
+          position: relative;
+          top: 8px;
+          left: 485px;
+          height: 20px;
+          width: 20px;
+          font-weight: bold;
+          border-radius: 50%;
+          background-color: red;
+          color: white;
+          transform: scale(0);
+          transition: transform .2s .5s;
+
+          span {
+            position: relative;
+            display: inline-block;
+            top: -1.5px;
+            left: .5px;
+            font-size: 15px;
+          }
+        }
+      }
+    }
   }
 
   .videoPostForm {
