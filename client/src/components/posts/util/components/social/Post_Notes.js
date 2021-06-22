@@ -16,7 +16,7 @@ const { FETCH_LIKES_REPOSTS_AND_COMMENTS } = Queries;
 const { COMMENT_POST } = Mutations;
 const { handlePostNotesScrollOutOfWindow } = FeedUtil;
 const { commentPost } = UpdateCacheUtil;
-const { allowScroll } = PostFormUtil;
+const { allowScroll, preventScroll } = PostFormUtil;
 
 const PostNotes = ({
   post,
@@ -43,6 +43,16 @@ const PostNotes = ({
 
     return () => {
       document.removeEventListener('scroll', scroll)
+    }
+  }, [notesActive, setNotesActive])
+
+  useEffect(() => {
+    if (notesActive) {
+      preventScroll(notesActive, document)
+    }
+
+    return () => {
+      allowScroll(document)
     }
   }, [notesActive, setNotesActive])
 

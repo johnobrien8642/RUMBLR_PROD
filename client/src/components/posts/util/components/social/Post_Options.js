@@ -51,10 +51,6 @@ const PostOptions = ({
         <div
           className='notesBtn'
           onClick={() => {
-            if (window.innerHeight < 980) {
-              preventScroll(document)
-            }
-            
             toggleNotes(notesActive, setNotesActive)
           }}
         >
