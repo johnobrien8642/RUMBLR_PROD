@@ -125,7 +125,7 @@ const PostOptions = ({
           className='postOptions'
         >
           <img
-            className='addCommentBtn'
+            className='commentBubbleBtn'
             src="https://img.icons8.com/windows/64/000000/speech-bubble--v1.png"
             alt=''
             onClick={() => {
