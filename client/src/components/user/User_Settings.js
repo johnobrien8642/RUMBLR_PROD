@@ -29,10 +29,10 @@ const UserSettings = () => {
   
   return (
     <div
-      className='browserUserSettingsContainer'
+      className='userSettingsContainer'
     >
       <div
-        className='browserUserSettings'
+        className='userSettings'
       >
         <div
           className='backBtn'

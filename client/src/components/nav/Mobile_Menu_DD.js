@@ -61,6 +61,7 @@ const MobileMenuDD = ({
             to='/dashboard/create'
             className='mobileMenuItem createAPost'
             onClick={() => {
+              allowScroll(document)
               openMenu(menuOpen = false)
             }}
           >
@@ -80,7 +81,8 @@ const MobileMenuDD = ({
             <Link
               className='dashboard'
               to='/dashboard'
-                onClick={() => {      
+                onClick={() => {
+                  allowScroll(document)
                   openMenu(menuOpen = false)
                 }}
             >
@@ -99,6 +101,7 @@ const MobileMenuDD = ({
               className='discover'
               to='/discover'
               onClick={() => {
+                allowScroll(document)
                 openMenu(menuOpen = false)
               }}
             >

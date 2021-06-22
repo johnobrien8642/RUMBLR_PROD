@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useMutation } from '@apollo/client';
 import Cookies from 'js-cookie';
 
@@ -19,6 +19,15 @@ const BlogDescription = ({
   let [blogDescription, setBlogDescription] = useState('');
   let [password, setPassword] = useState('');
   let [errorMessage, setError] = useState(null);
+
+  useEffect(() => {
+    var el = document.querySelector('.blogDescriptionTextarea')
+
+    if (el) {
+      el.textContent = userBlogDescription
+    }
+  
+  }, [userBlogDescription])
 
   let [updateUserBlogDescription] = useMutation(UPDATE_USER_BLOG_DESCRIPTION, {
     update(client, { data }) {

@@ -1,4 +1,6 @@
 import React from 'react';
+import PostFormUtil from '../posts/util/functions/post_form_util.js';
+const { allowScroll, preventScroll } = PostFormUtil;
 
 const HamburgerOrExitIcon = ({
   menuOpen,
@@ -17,6 +19,7 @@ const HamburgerOrExitIcon = ({
         onClick={() => {
           openSettings(settingsOpen = false)
           openMenu(menuOpen = false)
+          allowScroll(document)
         }}
           src="https://img.icons8.com/ios-filled/64/ffffff/x.png"
           alt=''
@@ -33,6 +36,7 @@ const HamburgerOrExitIcon = ({
 
           openSettings(settingsOpen = false)
           openMenu(menuOpen = true)
+          preventScroll(menuOpen, document)
         }}
           src="https://img.icons8.com/fluent-systems-filled/64/ffffff/menu.png"
           alt=''

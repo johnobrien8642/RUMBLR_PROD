@@ -238,6 +238,12 @@ const RepostForm = ({
                 <button
                   className='formSubmitBtn'
                   type='submit'
+                  onClick={() => {
+
+                    if (!update) {
+                      setPostFormModal(postFormModal = false)
+                    }
+                  }}
                 >
                   {update ? 'Update' : 'Repost'}
                 </button>
