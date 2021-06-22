@@ -27,7 +27,9 @@ const PostShow = ({
   discover, 
   radar,
   repostCaption,
-  setRepostCaption
+  setRepostCaption,
+  uploading,
+  setUploading
 }) => {
   let [notesActive, setNotesActive] = useState(false)
   let [repostActive, setRepostActive] = useState(false)
@@ -172,6 +174,8 @@ const PostShow = ({
               post={post}
               repostActive={repostActive}
               setRepostActive={setRepostActive}
+              uploading={uploading}
+              setUploading={setUploading}
             />
         </React.Fragment>
       )

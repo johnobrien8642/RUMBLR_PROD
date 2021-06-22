@@ -22,7 +22,9 @@ const RepostForm = ({
   repostActive,
   setRepostActive,
   update,
-  setUpdate
+  setUpdate,
+  uploading,
+  setUploading
 }) => {
   let [repostCaption, setRepostCaption] = useState('');
   // let repostTrail = useState([])
@@ -49,6 +51,7 @@ const RepostForm = ({
     onCompleted(data) {
       resetInputs();
       setRepostActive(repostActive = false)
+      setUploading(uploading = false)
     },
     onError(error) {
       console.log(error)
@@ -187,14 +190,34 @@ const RepostForm = ({
     }
   }
 
+  const handleRepostModalClass = () => {
+    if (uploading) {
+      return 'repostModal hidden'
+    } else if (update) {
+      return 'repostModal none'
+    } else {
+      return 'repostModal'
+    }
+  }
+
+  const handleRepostFormClass = () => {
+    if (uploading) {
+      return 'repostForm hidden'
+    } else if (update) {
+      return 'repostForm update'
+    } else {
+      return 'repostForm'
+    }
+  }
+
   if (repostActive || update) {
     return (
       <React.Fragment>
         <div 
-          className={update ? 'repostModal none' : 'repostModal'}
+          className={handleRepostModalClass()}
         >
           <div
-            className={update ? 'repostForm update' : 'repostForm'}
+            className={handleRepostFormClass()}
           >
 
             {handleRepostFormHeader()}
@@ -239,10 +262,7 @@ const RepostForm = ({
                   className='formSubmitBtn'
                   type='submit'
                   onClick={() => {
-
-                    if (!update) {
-                      setPostFormModal(postFormModal = false)
-                    }
+                    setUploading(uploading = true)
                   }}
                 >
                   {update ? 'Update' : 'Repost'}
