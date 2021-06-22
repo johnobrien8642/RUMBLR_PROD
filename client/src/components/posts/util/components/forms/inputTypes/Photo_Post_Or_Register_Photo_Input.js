@@ -80,12 +80,18 @@ const PhotoPostOrRegisterInput = ({
       )
     }
   }
- 
-  if (register) {
-    return (
-      <div
-        className='profilePicPreview'
-      >
+
+  const renderPhotoPreview = (
+    previewProfilePicRef,
+    profileImageFile,
+    setProfileImageFile,
+    edit,
+    render,
+    setRender,
+    renderRemoveBtn
+  ) => {
+    if (Object.keys(previewProfilePicRef.current).length > 0) {
+      return (
         <div
           className='previewImg'
         >
@@ -101,7 +107,25 @@ const PhotoPostOrRegisterInput = ({
             alt={previewProfilePicRef.current.alt}
           />
         </div>
-
+      )
+    }
+  }
+ 
+  if (register) {
+    return (
+      <div
+        className='profilePicPreview'
+      >
+        {renderPhotoPreview(
+          previewProfilePicRef,
+          profileImageFile,
+          setProfileImageFile,
+          edit,
+          render,
+          setRender,
+          renderRemoveBtn,
+        )}    
+    
         {renderPhotoInput(
           register,
           previewProfilePicRef,
