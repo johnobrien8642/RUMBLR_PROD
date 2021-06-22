@@ -16,6 +16,14 @@
   display: none;
 }
 
+.mobilePostsNavModal.hidden {
+  display: hidden;
+}
+
+.mobilePostsNav.hidden {
+  display: hidden;
+}
+
 .mobilePostsNavModal {
   display: block;
   position: fixed;

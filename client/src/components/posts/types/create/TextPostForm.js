@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useMutation } from '@apollo/client';
+import { useHistory } from 'react-router-dom';
 import randomstring from 'randomstring';
 import Cookies from 'js-cookie';
-import { useHistory } from 'react-router-dom';
 
 import TextPostInput from '../../util/components/forms/inputTypes/Text_Post_Input'
 import BodyImageAndText from '../../util/components/forms/Body_Image_And_Text'
@@ -89,6 +89,7 @@ const TextPostForm = ({
 
         if (mobile) {
           setPostFormOpen(postFormOpen = false)
+          history.push('/dashboard')
         }
 
         setUploading(uploading = false)
