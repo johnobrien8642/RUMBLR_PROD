@@ -58,7 +58,7 @@ const PostShow = ({
     }
   })
 
-  let { data } = useQuery(FETCH_LIKES_REPOSTS_AND_COMMENTS, {
+  let { loading, error, data } = useQuery(FETCH_LIKES_REPOSTS_AND_COMMENTS, {
     variables: {
       postId: post._id
     }
@@ -78,15 +78,15 @@ const PostShow = ({
         <React.Fragment>
           <PostNotes
             post={post}
-            notesCount={data ? data.fetchLikesRepostsAndComments.length : ''}
-            notes={data ? data.fetchLikesRepostsAndComments : ''}
+            notesCount={data.fetchLikesRepostsAndComments.length}
+            notes={data.fetchLikesRepostsAndComments}
             notesActive={notesActive}
             setNotesActive={setNotesActive}
           />
       
           <PostOptions
             post={post}
-            notesCount={data ? data.fetchLikesRepostsAndComments.length : ''}  
+            notesCount={data.fetchLikesRepostsAndComments.length}
             notesActive={notesActive}
             setNotesActive={setNotesActive}
             toggleNotes={toggleNotes}
@@ -144,6 +144,9 @@ const PostShow = ({
       )
     }
   }
+
+  if (loading) return 'Loading...';
+  if (error) return `Error: ${error}`
   
   switch(post) {
     case null:
