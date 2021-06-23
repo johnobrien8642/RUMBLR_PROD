@@ -14,27 +14,36 @@ I found a coding bootcamp called App Academy. App Academy is a 9 week
 in-person coding bootcamp, but they also offer their entire course for free
 online. I followed this course at my own pace over the course of the last year.
 
-The stack used to create this clone was MongoDB, Express, React, Node, GraphQL and Apollo.
-My static file database is aws s3 with Cloudfront as the CDN. My database is MongoDB Atlas.
+The stack used to create this clone is MongoDB, Express, React, Node, GraphQL and Apollo.
+My static file database is AWS s3 with Cloudfront as the CDN. My database is MongoDB Atlas.
 App Academy teaches two tech stacks throughout their course. They begin with Ruby and Ruby
 On Rails with Postgresql and they end with the MERN stack. While I do enjoy Ruby On Rails
 and look forward to possibly returning to it in the future, I decided to use the
 MERNGA stack here for a few different reasons:
 
--RoR is a very streamlined and forgiving experience. When I was deciding what stack
-I wanted to use for this clone I chose MERNGA because it would be more of a challenge.
-I wanted the greater challenge of this stack to test my newly acquired programming
-knowledge.
+-I wanted to gain as much as experience as I could using Javascript.
 
--Javascript. Given that it's the backbone of the web I wanted to get a lot of 
-experience with it.
+-After being introduced to React I found that I really enjoyed how easy it made
+using Javascript to render all of my UI.
 
--After being introduced to GraphQL--as well as Apollo and caching generally--I was 
-very intrigued and wanted to learn more.
+-I found that the GraphQL query paradigm made a lot of sense to me and offered me 
+a degree of control over my queries that other fetching methods do not have.
 
--I had also become interested in NoSQL and DBMS and wanted to explore MongoDB more. The
-added bonus of MongoDB was the ability to not have to write a migration every time I 
-changed my database schema, which ended up being very frequently.
+-Apollo also appeared to be a powerful tool. For the purposes of a social media website
+I knew that I would want the ability to cache large swaths of data to minimize
+hits to the database.
+
+-I wanted to use MongoDB for a few reasons. For this project I decided that a NoSQL,
+DBDS would be an easy way to implement the features I was going to be including.
+SQL would also have been adequate, but I felt that the addition of not having to write
+a migration every time I changed the database schema was also very useful given that this
+is my first full project and I knew I was going to be making frequent changes to the
+database schema.
+
+-The MERNGA stack I used is far less forgiving and streamlined than using Ruby On Rails.
+I decided that at this point in my journey as a programmer it was time to take on a greater
+challenge to help solidify the underlying principles of software programming and web 
+development I had so recently learned.
 
 ---------------------------------------------------------------------------------------
 
