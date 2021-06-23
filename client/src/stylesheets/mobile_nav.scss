@@ -29,7 +29,6 @@
         
         &:hover {
           cursor: pointer;
-          //no change
         }
       }
     
@@ -339,7 +338,13 @@
           height: 25px;
           font-size: 13px;
         }
-  
+        
+        .tagResultContainer {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+        }
+
         .followedTags {
           overflow: auto;
 
@@ -390,7 +395,7 @@
           }
 
           .tagResult {
-            height: 25px;
+            height: fit-content;
           }
           
           li {
