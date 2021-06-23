@@ -304,15 +304,18 @@ const updateCacheInfScrollFollowedUsers = (
 }
 
 const handleData = (data, feedArr, cursorId, endOfPosts) => {
-  var { fetchUserFeed, 
-        fetchTagFeed, 
-        fetchAllUserActivity, 
+  var { fetchUserFeed,
+        fetchUserBlogFeed,
+        fetchTagFeed,
+        fetchAllUserActivity,
         fetchUserFollowers,
         fetchFollowedUsers,
         fetchUserLikes } = data
 
   if (fetchUserFeed) {
     feedArr.current = fetchUserFeed
+  } else if (fetchUserBlogFeed) {
+    feedArr.current = fetchUserBlogFeed
   } else if (fetchTagFeed) {
     feedArr.current = fetchTagFeed
   } else if (fetchAllUserActivity) {
