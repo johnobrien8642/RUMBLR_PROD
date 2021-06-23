@@ -114,8 +114,8 @@ const Queries = {
       }
     }
   `,
-  FETCH_USER_BLOG: gql`
-    query fetchUserBlog($query: String) {
+  FETCH_USER_BLOG_FEED: gql`
+    query fetchUserBlogFeed($query: String) {
       user(query: $query) {
         _id
         blogName

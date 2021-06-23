@@ -341,6 +341,7 @@ const setgqlQueryAndQueryFeed = (
   tag, user, userLikes,
   gqlQuery, query, 
   FETCH_TAG_FEED,
+  FETCH_USER_BLOG_FEED,
   FETCH_USER_LIKES,
   currentUser
 ) => {
@@ -350,6 +351,7 @@ const setgqlQueryAndQueryFeed = (
     gqlQuery.current = FETCH_TAG_FEED
   } else if (user) {
     query.current = user.blogName
+    gqlQuery.current = FETCH_USER_BLOG_FEED
   } else if (userLikes) {
     query.current = currentUser
     gqlQuery.current = FETCH_USER_LIKES
