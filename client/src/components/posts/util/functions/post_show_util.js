@@ -291,6 +291,7 @@ const postBody = (post) => {
       <React.Fragment>
         <ReactPlayer
           width={'100%'}
+          height={'100%'}
           url={data.videoLink.url}
           controls
         />
