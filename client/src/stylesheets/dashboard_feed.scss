@@ -857,6 +857,10 @@
               color: var(--tumblr-light-blue);
               margin: 0 0 0 15px;
 
+              &:hover {
+                cursor: pointer;
+              }
+
               @media (max-width: 1024px) {
                 top: 1px;
                 margin: 0 0 0 15px;

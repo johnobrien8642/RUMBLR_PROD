@@ -59,6 +59,12 @@ const RepostForm = ({
   })
   
   let [updateRepost] = useMutation(UPDATE_REPOST, {
+    update(client, { data }) {
+      const { updateRepost } = data
+
+      console.log(updateRepost)
+
+    },
     onCompleted() {
       setUpdate(update = false)
     },
