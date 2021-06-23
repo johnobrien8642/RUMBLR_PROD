@@ -108,7 +108,7 @@ const Feed = ({
                 className='userRepostShowHeader'
               >
                 <ProfilePic
-                  user={obj.post.user}
+                  user={obj.user}
                 />
                 <span
                   className='repostHeaderContainer'
@@ -130,7 +130,7 @@ const Feed = ({
                       className='repostedFrom'
                       to={`/view/blog/${obj.repostedFrom.blogName}`}
                     >
-                      {obj.user.blogName}
+                      {obj.repostedFrom.blogName}
                     </Link>
                     <FollowButton
                       feed={true}
