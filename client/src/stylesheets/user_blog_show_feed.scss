@@ -97,13 +97,12 @@
       display: block;
       position: absolute;
       top: 75px;
-      left: 60%;
+      left: 650px;
       width: fit-content;
 
       @media (max-width: 1024px) {
-        top: 4%;
-        left: 84%;
-        transform: translateX(-50%);
+        top: 70px;
+        left: 270px;
       }
       
       button {
