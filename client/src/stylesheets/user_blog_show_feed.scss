@@ -80,9 +80,29 @@
           form {
             display: block;
             position: absolute;
-            left: 56%;
+            right: 27%;
             margin: 50px 8px 0 15px;
             width: fit-content;
+
+            @media (max-width: 1024px) {
+              right: 30%;
+
+              @media(max-width: 539px) {
+                right: 0;
+              }
+
+              @media (min-width: 540px) {
+                right: 10%;
+              }
+
+              @media (min-width: 768px) {
+                right: 23%;
+              }
+
+              @media (min-width: 980px) {
+                right: 27%;
+              }
+            }
             
             button {
               background-color: var(--tumblr-light-blue);
