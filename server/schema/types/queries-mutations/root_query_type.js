@@ -680,6 +680,27 @@ const RootQueryType = new GraphQLObjectType({
         })
       }
     },
+    fetchUserBlogFeed: {
+      type: GraphQLList(AnyPostType),
+      args: {
+        query: { type: GraphQLString }
+      },
+      resolve(parentValue, { query }) {
+        return User.aggregate([
+          { $match: { blogName: query } },
+          { $lookup: {
+              from: 'posts',
+              localField: '_id',
+              foreignField: 'user',
+              as: 'posts'
+            }
+          },
+          { $unwind: '$posts' },
+          { $replaceRoot: { "newRoot": "$posts" } },
+          { $sort: { "createdAt": -1 } } 
+        ]).then(res => res)
+      }
+    },
     fetchFollowedUsers: {
       type: GraphQLList(FollowType),
       args: {

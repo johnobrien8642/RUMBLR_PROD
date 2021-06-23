@@ -37,14 +37,6 @@ const UserType = new GraphQLObjectType({
           .then(user => user.profilePic)
       }
     },
-    posts: {
-      type: new GraphQLList(AnyPostType),
-      resolve(parentValue) {
-        return User.findById(parentValue._id)
-          .populate('posts')
-          .then(user => user.posts)
-      }
-    },
     reposts: {
       type: new GraphQLList(RepostType),
       resolve(parentValue) {
