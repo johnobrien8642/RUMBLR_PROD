@@ -34,7 +34,7 @@ const UserBlogShow = () => {
           <h1>{user.user.blogName}</h1>
           <h3>{user.user.blogDescription}</h3>
         </div>
-        <FollowButton 
+        <FollowButton
           user={user.user}
         />
       </div>

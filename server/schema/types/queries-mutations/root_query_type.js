@@ -698,7 +698,9 @@ const RootQueryType = new GraphQLObjectType({
           { $unwind: '$posts' },
           { $replaceRoot: { "newRoot": "$posts" } },
           { $sort: { "createdAt": -1 } } 
-        ]).then(res => res)
+        ]).then(res => {
+          return res          
+        })
       }
     },
     fetchFollowedUsers: {

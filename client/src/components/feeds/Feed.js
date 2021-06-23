@@ -36,7 +36,7 @@ const Feed = ({
     user, 
     userLikes, 
     gqlQuery, 
-    query, 
+    query,
     FETCH_TAG_FEED,
     FETCH_USER_BLOG_FEED,
     FETCH_USER_LIKES,

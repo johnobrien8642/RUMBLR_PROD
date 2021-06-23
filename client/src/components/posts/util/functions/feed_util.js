@@ -341,8 +341,11 @@ const handleData = (data, feedArr, cursorId, endOfPosts) => {
 }
 
 const setgqlQueryAndQueryFeed = (
-  tag, user, userLikes,
-  gqlQuery, query, 
+  tag, 
+  user, 
+  userLikes,
+  gqlQuery, 
+  query,
   FETCH_TAG_FEED,
   FETCH_USER_BLOG_FEED,
   FETCH_USER_LIKES,
