@@ -9,8 +9,8 @@ password: password
 
 https://rumblr.app
 
-I began my coding journey at the beginning of last year. Around that time time
-I had found a coding bootcamp called App Academy. App Academy is a 9 week 
+I began my coding journey at the beginning of last year. Around that time
+I found a coding bootcamp called App Academy. App Academy is a 9 week 
 in-person coding bootcamp, but they also offer their entire course for free
 online. I followed this course at my own pace over the course of the last year.
 
