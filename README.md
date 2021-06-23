@@ -1,5 +1,10 @@
-Hi, welcome to my clone of Tumblr, Rumblr. Simply follow the link
-below and create a profile.
+Hi, welcome to my clone of Tumblr, called Rumblr.
+
+To use the site you can either create your own account or log in
+with this guest account:
+
+email: guest@email.com
+password: password
 
 https://rumblr.app
 
