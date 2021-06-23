@@ -262,7 +262,10 @@ const RepostForm = ({
                   className='formSubmitBtn'
                   type='submit'
                   onClick={() => {
-                    setUploading(uploading = true)
+
+                    if (!update) {
+                      setUploading(uploading = true)
+                    }
                   }}
                 >
                   {update ? 'Update' : 'Repost'}
