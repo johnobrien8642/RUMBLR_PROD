@@ -215,7 +215,7 @@ const PostNotes = ({
                     </div>
                     
                     <div
-                      className='notesRepostCaption'
+                      className='noteRepostCaption'
                       dangerouslySetInnerHTML={{ 
                         __html: DOMPurify.sanitize(caption)
                       }}
