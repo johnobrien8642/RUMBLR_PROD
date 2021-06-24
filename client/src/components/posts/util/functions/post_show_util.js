@@ -20,13 +20,13 @@ const postHeader = (
         className='userRepostHeader'
       >
         <span>
-          <ProfilePic 
-            user={post.user}
+          <ProfilePic
+            user={post.post.user}
           />
           <Link
-            to={`/view/blog/${post.user.blogName}`}
+            to={`/view/blog/${post.post.user.blogName}`}
           >
-            {post.user.blogName}
+            {post.post.user.blogName}
           </Link>
         </span>
       </div>

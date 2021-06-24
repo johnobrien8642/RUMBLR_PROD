@@ -214,7 +214,8 @@ const PostNotes = ({
                       </div>
                     </div>
                     
-                    <div 
+                    <div
+                      className='notesRepostCaption'
                       dangerouslySetInnerHTML={{ 
                         __html: DOMPurify.sanitize(caption)
                       }}
