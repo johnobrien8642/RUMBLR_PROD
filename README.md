@@ -9,6 +9,8 @@ password: password
 
 https://rumblr.app
 
+[http://d1k9pgunak0305.cloudfront.net/ListOfRumblrFeatures.pdf](Here's a link to a full list of all the features I was able to include in Rumblr.)
+
 I began my coding journey at the beginning of last year. Around that time
 I found a coding bootcamp called App Academy. App Academy is a 9 week 
 in-person coding bootcamp, but they also offer their entire course for free
