@@ -11,6 +11,8 @@ https://rumblr.app
 
 [Here's a link to a full list of all the features I was able to include in Rumblr.](https://d1k9pgunak0305.cloudfront.net/ListOfFeaturesRumblr.pdf)
 
+[Here's another link to a blog post where I go in depth critiquing Rumblr.](https://johnobriendeveloper.com/blog/60e2367e16fa3c12470e36d5)
+
 I began my coding journey at the beginning of last year. Around that time
 I found a coding bootcamp called App Academy. App Academy is a 9 week 
 in-person coding bootcamp, but they also offer their entire course for free
