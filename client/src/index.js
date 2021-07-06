@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ApolloClient, InMemoryCache,
-          ApolloProvider, HttpLink, useMutation } from '@apollo/client';
+          ApolloProvider, HttpLink } from '@apollo/client';
 import { BrowserRouter } from 'react-router-dom';
 import { onError } from '@apollo/client/link/error';
 import { setContext } from '@apollo/client/link/context';
@@ -214,13 +214,13 @@ setInterval(() => {
   var token = Cookies.get('auth-token')
 
   if (token) {
-    useMutation(LOGOUT_USER, {
-      variables: {
-        token: token
-      }
-    })
-  }
+    client
+      .mutate({ mutation: LOGOUT_USER, variables: { token: token }})
+      .then(() => {
+        history.push('/')
+      })
 
+  }
 }, 5000)
 
 const Root = () => {
