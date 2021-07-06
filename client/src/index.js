@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { ApolloClient, InMemoryCache,
           ApolloProvider, HttpLink } from '@apollo/client';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, useHistory } from 'react-router-dom';
 import { onError } from '@apollo/client/link/error';
 import { setContext } from '@apollo/client/link/context';
 import Cookies from 'js-cookie';
@@ -18,6 +18,7 @@ const { VERIFY_USER, LOGOUT_USER } = Mutations;
 
 const token = Cookies.get('auth-token');
 const envURI = process.env.NODE_ENV === 'development' ? `http://localhost:5000/graphql` : 'https://rumblr.app/graphql'
+const history = useHistory()
 
 const authLink = setContext((_, { headers }) => {
   return {
