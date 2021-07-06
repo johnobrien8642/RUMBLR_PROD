@@ -15,7 +15,7 @@ and inspect the source code here in this repository.
 
 [Check out this full list of features I've made for all the features I was able to implement (there are 90+!).](https://d1k9pgunak0305.cloudfront.net/ListOfFeaturesRumblr.pdf)
 
-[Check out this blog post where I give give more information 
+[Check out this blog post where I give more information 
 about my story and a full critique of this app.](https://johnobriendeveloper.com/blog/60e2367e16fa3c12470e36d5)
 
 
