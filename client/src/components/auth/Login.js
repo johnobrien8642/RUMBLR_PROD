@@ -9,8 +9,8 @@ const { LOGIN_USER } = Mutations;
 const { IS_LOGGED_IN } = Queries;
 
 const Login = () => {
-  let [email, setEmail] = useState('');
-  let [password, setPassword] = useState('');
+  let [email, setEmail] = useState('guest@email.com');
+  let [password, setPassword] = useState('password');
   let [errorMessages, addErrorMessage] = useState([]);
   const location = useLocation();
   
