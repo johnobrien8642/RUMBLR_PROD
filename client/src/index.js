@@ -215,7 +215,9 @@ setInterval(() => {
 
   if (token) {
     client.mutate({ mutation: LOGOUT_USER, variables: { token: token }})
-    alert("This clone automatically logs out after 2 hours. If you'd like to keep checking out Rumblr simply log in again.")
+      .then(res => console.log(result))
+      .then(error => console.log(error))
+    // alert("This clone automatically logs out after 2 hours. If you'd like to keep checking out Rumblr simply log in again.")
   }
 
 }, 5000)
