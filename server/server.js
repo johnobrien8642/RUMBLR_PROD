@@ -37,7 +37,6 @@ if (process.env.NODE_ENV === 'production') {
   })
 }
 
-
 cronTagFollowerHeat.start()
 cronTagPostHeat.start()
 cronPostNotesHeat.start()

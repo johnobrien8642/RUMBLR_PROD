@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ApolloClient, InMemoryCache,
-          ApolloProvider, HttpLink } from '@apollo/client';
+          ApolloProvider, HttpLink, useMutation } from '@apollo/client';
 import { BrowserRouter } from 'react-router-dom';
 import { onError } from '@apollo/client/link/error';
 import { setContext } from '@apollo/client/link/context';
@@ -14,7 +14,7 @@ import Queries from './graphql/queries'
 import Mutations from './graphql/mutations'
 
 const { IS_LOGGED_IN } = Queries;
-const { VERIFY_USER } = Mutations;
+const { VERIFY_USER, LOGOUT_USER } = Mutations;
 
 const token = Cookies.get('auth-token');
 const envURI = process.env.NODE_ENV === 'development' ? `http://localhost:5000/graphql` : 'https://rumblr.app/graphql'
@@ -209,6 +209,19 @@ if (token) {
       })
     })
 }
+
+setInterval(() => {
+  var token = Cookies.get('auth-token')
+
+  if (token) {
+    useMutation(LOGOUT_USER, {
+      variables: {
+        token: token
+      }
+    })
+  }
+  
+}, 1000 * 60 * 60)
 
 const Root = () => {
   return (
