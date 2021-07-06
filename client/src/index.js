@@ -211,16 +211,27 @@ if (token) {
 }
 
 setInterval(() => {
-  var token = Cookies.get('auth-token')
 
-  if (token) {
-    client.mutate({ mutation: LOGOUT_USER, variables: { token: token }})
-      .then(res => console.log(result))
-      .then(error => console.log(error))
-    // alert("This clone automatically logs out after 2 hours. If you'd like to keep checking out Rumblr simply log in again.")
+  if (Cookies.get('auth-token')) {
+    client
+      .mutate({ mutation: LOGOUT_USER, variables: { token: token } })
+      .then(({ data }) => {
+
+        client.writeQuery({
+          query: IS_LOGGED_IN,
+          data: {
+            isLoggedIN: data.logoutUser.loggedIn
+          }
+        })
+
+        Cookies.set('auth-token', '')
+        Cookies.set('currentUser', '')
+
+        alert("This clone logs you out automatically after two hours. If you'd like to continue checking out Rumblr simply log back in.")
+      })
   }
 
-}, 5000)
+}, 1000*60*60*2)
 
 const Root = () => {
   return (
