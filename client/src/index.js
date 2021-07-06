@@ -18,7 +18,6 @@ const { VERIFY_USER, LOGOUT_USER } = Mutations;
 
 const token = Cookies.get('auth-token');
 const envURI = process.env.NODE_ENV === 'development' ? `http://localhost:5000/graphql` : 'https://rumblr.app/graphql'
-const history = useHistory()
 
 const authLink = setContext((_, { headers }) => {
   return {
