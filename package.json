@@ -8,8 +8,8 @@
     "client-install": "npm install --prefix client",
     "client": "npm start --prefix client",
     "server": "nodemon index.js",
-    "dev": "NODE_ENV=development HTTP_PROXY=http://localhost:5000/graphql concurrently \"npm run server\" \"npm run client\"",
-    "build": "npm install && cd client && npm install && npm run build"
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm install && cd client && npm run install && npm run build"
   },
   "repository": {
     "type": "git",
