@@ -219,7 +219,6 @@ setInterval(() => {
       .then(() => {
         history.push('/')
       })
-
   }
 }, 5000)
 
