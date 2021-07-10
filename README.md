@@ -1,22 +1,23 @@
 Hi, welcome to my clone of Tumblr, called Rumblr.
 
-To use the site you can either create your own account or log in
-with this guest account:
-
-email: guest<span>@</span>email.com
-
-password: password
+Exploring Rumblr is easy. Follow the link below. The form is pre-filled
+with a guest account. Simply click Log in. You can also make your own account
+by navigating to the Sign up page.
 
 https://rumblr.app
 
-[Here's a link to a full list of all the features I was able to include in Rumblr.](https://d1k9pgunak0305.cloudfront.net/ListOfFeaturesRumblr.pdf)
+Rumblr will automatically log you out after 2 hours. Simply log back in if you weren't
+done exploring Rumblr.
 
-[Here's another link to a blog post where I go in depth critiquing Rumblr.](https://johnobriendeveloper.com/blog/60e2367e16fa3c12470e36d5)
+I'm currently working on implementing a Dockerfile to make this app available
+to download and run locally. For now you can check out the hosted version
+and inspect the source code here in this repository.
 
-I began my coding journey at the beginning of last year. Around that time
-I found a coding bootcamp called App Academy. App Academy is a 9 week 
-in-person coding bootcamp, but they also offer their entire course for free
-online. I followed this course at my own pace over the course of the last year.
+[Check out this full list of features I've made for all the features I was able to implement (there are 90+!).](https://d1k9pgunak0305.cloudfront.net/ListOfFeaturesRumblr.pdf)
+
+[Check out this blog post where I give more information 
+about my story and a full critique of this app.](https://johnobriendeveloper.com/blog/60e2367e16fa3c12470e36d5)
+
 
 The stack used to create this clone is MongoDB, Express, React, Node, GraphQL and Apollo.
 My static file database is AWS s3 with Cloudfront as the CDN. My database is MongoDB Atlas.
@@ -31,29 +32,29 @@ MERNGA stack here for a few different reasons:
 using Javascript to render all of my UI.
 
 -I found that the GraphQL query paradigm made a lot of sense to me and offered me 
-a degree of control over my queries that other fetching methods do not have.
+a degree of control over my queries that other fetching methods lack.
 
--Apollo also appeared to be a powerful tool. For the purposes of a social media website
-I knew that I would want the ability to cache large swaths of data to minimize
-hits to the database.
+-There were a few times when I did end up using regular RESTful routes. Express
+makes REST easy.
 
--I wanted to use MongoDB for a few reasons. For this project I decided that a NoSQL,
-DBDS would be an easy way to implement the features I was going to be including.
-SQL would also have been adequate, but I felt that the addition of not having to write
-a migration every time I changed the database schema was also very useful given that this
-is my first full project and I knew I was going to be making frequent changes to the
-database schema.
+-I greatly enjoy the power of Apollo and wanted to get more experience using it. 
+
+-I find I'm very interested in NoSQL and enjoy using the document based database
+system. MongoDB and Mongoose is a very mature and powerful combination. I knew I
+was going to be changing my database frequently and not having to write migrations
+helped greatly speed up development time.
 
 -The MERNGA stack I used is far less forgiving and streamlined than using Ruby On Rails.
-I decided that at this point in my journey as a programmer it was time to take on a greater
-challenge to help solidify the underlying principles of software programming and web 
-development I had so recently learned.
+I wanted to challenge myself to master a less forgiving stack to really solidify my 
+the fundamentals of my newly acquired programming knowledge.
 
 ---------------------------------------------------------------------------------------
 
 I attempted to clone as many features as I could possibly handle during the past three months.
-In the app you will see what is essentially the very basics of a fully functioning social
-media application.
+I break down my reasons why I chose to clone so many features in [this blog post.](https://johnobriendeveloper.com/blog/60e2367e16fa3c12470e36d5)
+
+The effect I was trying to achieve was basically creating a fully functioning and usable
+social media website application that worked across browsers and mobile.
 
 Highlighting just a few of the features I built, these two come to mind:
 
