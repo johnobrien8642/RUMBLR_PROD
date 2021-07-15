@@ -64,7 +64,7 @@ const Login = () => {
           MongoDB, Express, React, Node, Apollo and GraphQL!
         </p>
           <a 
-            href={"https://github.com/johnobrien8642/Rumblr_MERNG"}
+            href={"https://github.com/johnobrien8642/RUMBLR_PROD"}
           >
             Go to Github repository
           </a>
