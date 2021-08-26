@@ -67,8 +67,8 @@ const MobileMenuDD = ({
           >
             <div>
             <img
-              src="https://img.icons8.com/metro/26/ffffff/edit.png"
-              alt=''
+              src='./assets/edit-icon-white.png'
+              alt='edit icon white'
             />
             <span>Create a post</span>
             </div>
@@ -87,8 +87,8 @@ const MobileMenuDD = ({
                 }}
             >
               <img
-                src="https://img.icons8.com/ios-glyphs/38/ffffff/home-page.png"
-                alt=''
+                src='./assets/home-icon.png'
+                alt='home icon white'
               />
               <span>Dashboard</span>
             </Link>
@@ -106,8 +106,8 @@ const MobileMenuDD = ({
               }}
             >
               <img
-                src="https://img.icons8.com/ios/34/ffffff/compass--v1.png"
-                alt=''
+                src='./assets/compass-icon.png'
+                alt='compass icon'
               />
               <span>Discover</span>
             </Link>
@@ -126,8 +126,8 @@ const MobileMenuDD = ({
               }}
             >
               <img
-                src="https://img.icons8.com/fluent-systems-filled/38/ffffff/lightning-bolt.png"
-                alt=''
+                src='./assets/lightning-bolt-icon.png'
+                alt='lightning bolt icon'
               />
               <span>Activity</span>
             </Link>
@@ -148,8 +148,8 @@ const MobileMenuDD = ({
               }}
             >
               <img 
-                src="https://img.icons8.com/material-sharp/24/ffffff/like--v1.png"
-                alt=''
+                src='./assets/like-icon-white.png'
+                alt='like icon white'
               />
                 <span>Likes</span>
             </Link>
@@ -168,8 +168,8 @@ const MobileMenuDD = ({
               }}
             >
               <img
-                src="https://img.icons8.com/metro/26/ffffff/gender-neutral-user.png"
-                alt=''
+                src='./assets/user-icon-white.png'
+                alt='user icon white'
               />
                 <span>Following</span>
             </Link>
@@ -188,8 +188,8 @@ const MobileMenuDD = ({
               to='/settings/account'
             >
               <img
-                src="https://img.icons8.com/material-sharp/24/ffffff/settings.png"
-                alt=''
+                src='./assets/settings-icon-white.png'
+                alt='settings icon white'
               />
               <span>Settings</span>
             </Link>

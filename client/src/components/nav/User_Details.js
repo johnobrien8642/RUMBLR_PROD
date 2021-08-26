@@ -62,8 +62,8 @@ const UserDetails = ({
             >
               <img
                 className='detailIcon'
-                src="https://img.icons8.com/material-rounded/24/000000/like--v1.png" 
-                alt='' 
+                src='./assets/like-icon-filled.png' 
+                alt='like icon filled' 
               />
               Likes
             </Link>
@@ -76,8 +76,8 @@ const UserDetails = ({
             >
               <img 
                 className='detailIcon'
-                src="https://img.icons8.com/metro/26/000000/add-user-male.png"
-                alt=''
+                src='./assets/user-icon-black.png'
+                alt='add user male icon black'
               />
               Following
             </Link>
@@ -90,8 +90,8 @@ const UserDetails = ({
             >
               <img
                 className='detailIcon'
-                src="https://img.icons8.com/material-sharp/24/000000/settings.png"
-                alt=''
+                src='./assets/settings-icon-black.png'
+                alt='settings icon black'
               />
               Settings
             </Link>
