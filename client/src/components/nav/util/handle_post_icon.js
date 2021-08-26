@@ -7,48 +7,48 @@ const handlePostIcon = (activity) => {
       return (
         <img
           className='textPostIcon'
-          src="https://img.icons8.com/ios-filled/64/000000/sentence-case.png"
-          alt=''
+          src='./assets/text-post-icon.png'
+          alt='text post icon'
         />
       )
     } else if (post.kind === 'PhotoPost') {
       return (
         <img
           className='photoPostIcon'
-          src="https://img.icons8.com/ios-glyphs/64/000000/camera.png"
-          alt=''
+          src='./assets/photo-post-mobile-icon.png'
+          alt='photo post mobile icon'
         />
       )
     } else if (post.kind === 'QuotePost') {
       return (
         <img
           className='quotePostIcon'
-          src="https://img.icons8.com/fluent-systems-filled/64/000000/quote-left.png"
-          alt=''
+          src='./assets/quote-post-mobile-icon.png'
+          alt='quote post mobile icon'
         />
       )
     } else if (post.kind === 'LinkPost') {
       return (
         <img
           className='linkPostIcon'
-          src="https://img.icons8.com/metro/64/000000/link.png"
-          alt=''
+          src='./assets/link-post-mobile-icon.png'
+          alt='link post mobile icon'
         />
       )
     } else if (post.kind === 'ChatPost') {
       return (
         <img
           className='chatPostIcon'
-          src="https://img.icons8.com/fluent-systems-filled/64/000000/speech-bubble-with-dots.png"
-          alt=''
+          src='./assets/chat-post-mobile-icon.png'
+          alt='chat post mobile icon'
         />
       )
     } else if (post.kind === 'AudioPost') {
       return (
         <img
           className='audioPostIcon'
-          src="https://img.icons8.com/fluent-systems-filled/64/000000/headphones.png"
-          alt=''
+          src='./assets/audio-post-mobile-icon.png'
+          alt='audio post mobile icon'
         />
     
       )
@@ -56,8 +56,8 @@ const handlePostIcon = (activity) => {
       return (
         <img
           className='videoPostIcon'
-          src="https://img.icons8.com/material-rounded/64/000000/camcorder-pro.png"
-          alt=''
+          src='./assets/video-post-mobile-icon.png'
+          alt='video post mobile icon'
         />
       )
     }

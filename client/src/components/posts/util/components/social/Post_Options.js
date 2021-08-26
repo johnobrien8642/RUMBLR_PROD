@@ -62,8 +62,8 @@ const PostOptions = ({
         >
           <img
             className='commentBubbleBtn'
-            src="https://img.icons8.com/windows/64/000000/speech-bubble--v1.png"
-            alt=''
+            src='./assets/speech-bubble-icon.png'
+            alt='speech bubble icon'
             onClick={() => {
               toggleNotes()
             }}
@@ -71,8 +71,8 @@ const PostOptions = ({
 
           <img 
             className='repostIcon'
-            src="https://img.icons8.com/material-outlined/64/000000/retweet.png"
-            alt=''
+            src='./assets/reblog-icon-black.png'
+            alt='reblog icon'
             onClick={() => {
               setNotesActive(notesActive = false)
               setRepostActive(repostActive = true)
@@ -88,8 +88,8 @@ const PostOptions = ({
 
           <img
             className='deletePostBtn'
-            src="https://img.icons8.com/metro/64/000000/delete.png"
-            alt=''
+            src='./assets/delete-icon.png'
+            alt='delete icon'
             onClick={() => {
               setNotesActive(notesActive = false)
               setConfirmDelete(confirmDelete = true)
@@ -97,8 +97,8 @@ const PostOptions = ({
           />
           <img
             className='editPostBtn'
-            src="https://img.icons8.com/windows/64/000000/edit--v1.png"
-            alt=''
+            src='./assets/edit-icon.png'
+            alt='edit icon'
             onClick={() => {
               setNotesActive(notesActive = false)
               toggleUpdate(update, setUpdate)
@@ -126,8 +126,8 @@ const PostOptions = ({
         >
           <img
             className='commentBubbleBtn'
-            src="https://img.icons8.com/windows/64/000000/speech-bubble--v1.png"
-            alt=''
+            src='./assets/speech-bubble-icon.png'
+            alt='speech bubble icon'
             onClick={() => {
               toggleNotes()
             }}
@@ -135,8 +135,8 @@ const PostOptions = ({
 
           <img 
             className='repostIcon'
-            src="https://img.icons8.com/material-outlined/64/000000/retweet.png"
-            alt=''
+            src='./assets/reblog-icon-black.png'
+            alt='reblog icon'
             onClick={() => {
               setNotesActive(notesActive = false)
               setRepostActive(repostActive = true)

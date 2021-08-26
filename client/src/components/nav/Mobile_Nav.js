@@ -109,7 +109,7 @@ const MobileNav = ({
             className='logo'
           >
             <img
-              src="https://img.icons8.com/fluent-systems-filled/48/ffffff/r.png"
+              src="./assets/main-logo.png"
               alt=''  
             />
           </div>

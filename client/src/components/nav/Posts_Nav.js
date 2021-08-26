@@ -34,28 +34,28 @@ const PostsNav = ({
 
   let iconUrls = {
     photo: { 
-      browser: "https://img.icons8.com/fluent/64/000000/old-time-camera.png",
-      mobile: "https://img.icons8.com/ios-glyphs/64/000000/camera.png"
+      browser: './assets/photo-post-browser-icon.png',
+      mobile: './assets/photo-post-mobile-icon.png'
     },
     quote: {
-      browser: "https://img.icons8.com/fluent/64/000000/quote-left.png",
-      mobile: "https://img.icons8.com/fluent-systems-filled/64/000000/quote-left.png"
+      browser: './assets/quote-post-browser-icon.png',
+      mobile: './assets/quote-post-mobile-icon.png'
     },
     link: {
-      browser: "https://img.icons8.com/flat-round/64/000000/link--v1.png",
-      mobile: "https://img.icons8.com/metro/64/000000/link.png"
+      browser: './assets/link-post-browser-icon.png',
+      mobile: './assets/link-post-mobile-icon.png'
     },
     chat: {
-      browser: "https://img.icons8.com/officel/64/000000/speech-bubble-with-dots.png",
-      mobile: "https://img.icons8.com/fluent-systems-filled/64/000000/speech-bubble-with-dots.png"
+      browser: './assets/chat-post-browser-icon.png',
+      mobile: './assets/chat-post-mobile-icon.png'
     },
     audio: {
-      browser: "https://img.icons8.com/nolan/64/headphones.png",
-      mobile: "https://img.icons8.com/fluent-systems-filled/64/000000/headphones.png"
+      browser: './assets/audio-post-browser-icon.png',
+      mobile: './assets/audio-post-mobile-icon.png'
     },
     video: {
-      browser: "https://img.icons8.com/nolan/64/camcorder-pro.png",
-      mobile: "https://img.icons8.com/material-rounded/64/000000/camcorder-pro.png"
+      browser: './assets/video-post-browser-icon.png',
+      mobile: './assets/video-post-mobile-icon.png'
     }
   }
   
@@ -138,8 +138,8 @@ const PostsNav = ({
               <div>
                 <img
                   className='postIcon'
-                  src="https://img.icons8.com/ios-filled/64/000000/sentence-case.png"
-                  alt=''
+                  src='./assets/text-post-icon.png'
+                  alt='text post icon'
                 />
                 <span>Text</span>
               </div>
@@ -383,8 +383,8 @@ const PostsNav = ({
               <div>
                 <img
                   className='postIcon'
-                  src="https://img.icons8.com/ios-filled/64/000000/sentence-case.png"
-                  alt=''
+                  src='./assets/text-post-icon.png'
+                  alt='text post icon'
                 />
                 <span>Text</span>
               </div>

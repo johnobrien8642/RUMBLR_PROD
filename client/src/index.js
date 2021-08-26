@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { ApolloClient, InMemoryCache,
           ApolloProvider, HttpLink } from '@apollo/client';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 import { onError } from '@apollo/client/link/error';
 import { setContext } from '@apollo/client/link/context';
 import Cookies from 'js-cookie';
@@ -234,13 +234,24 @@ setInterval(() => {
 }, 1000*60*60*2)
 
 const Root = () => {
-  return (
-    <ApolloProvider client={client}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </ApolloProvider>
-  )
+  var nodeEnv = process.env.NODE_ENV
+  if (nodeEnv === 'development') {
+    return (
+      <ApolloProvider client={client}>
+        <HashRouter>
+          <App />
+        </HashRouter>
+      </ApolloProvider>
+    )  
+  } else {
+    return (
+      <ApolloProvider client={client}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </ApolloProvider>
+    )
+  }
 }
 
 ReactDOM.render(<Root />, document.getElementById('root'));

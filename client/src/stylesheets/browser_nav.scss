@@ -611,6 +611,10 @@
           font-size: 18px;
           font-weight: 700;
 
+          &:hover {
+            cursor: pointer;
+          }
+
           span {
             margin: auto;
             padding-bottom: 10px;

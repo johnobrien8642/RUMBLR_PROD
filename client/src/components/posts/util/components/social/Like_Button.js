@@ -10,16 +10,17 @@ const { FETCH_LIKES_REPOSTS_AND_COMMENTS } = Queries;
 const { postLike, postUnlike } = UpdateCacheUtil;
 
 const LikeButton = ({ 
-  post, liked, 
+  post, 
+  liked, 
   refetchDoesUserLikePost
 }) => {
   var initial = liked ? true : false
 
-  let [status, setStatus] = useState(initial)
+  let [status, setStatus] = useState(initial);
 
   useEffect(() => {
     refetchDoesUserLikePost()
-  })
+  });
 
   let [likePost] = useMutation(LIKE_POST, {
     update(client, { data }) {
@@ -31,7 +32,7 @@ const LikeButton = ({
         post, query
       )
     }
-  })
+  });
 
   let [unlikePost] = useMutation(UNLIKE_POST, {
     update(client, { data }) {
@@ -43,14 +44,14 @@ const LikeButton = ({
         post, liked, query
       )
     }
-  })
+  });
   
   if (status) {
     return (
       <img
         className='likeBtn'
-        src="https://img.icons8.com/material-rounded/64/000000/like--v1.png"
-        alt=''
+        src='./assets/like-icon-filled.png'
+        alt='like icon filled'
         onClick={() => {
           unlikePost({
             variables: {
@@ -66,8 +67,8 @@ const LikeButton = ({
     return (
       <img
         className='likeBtn'
-        src="https://img.icons8.com/material-outlined/64/000000/like--v1.png"
-        alt=''
+        src='./assets/like-icon-empty.png'
+        alt='like icon empty'
         onClick={() => {
           likePost({
             variables: {

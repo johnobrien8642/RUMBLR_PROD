@@ -19,24 +19,23 @@ var s3Client = new aws.S3({
 })
 
 const handlePostDelete = async (post) => {
-
   if (post.kind === 'Repost') {
+    var repost = post
     return Post.findById(post.post._id)
       .then(repostedPost => {
         repostedPost.notesCount - 1
         return Promise.all([
           repostedPost.save(),
-          Post.deleteOne({ _id: post._id }),
-          Like.deleteMany({ post: post._id }),
-          Comment.deleteMany({ post: post._id }),
-          Mention.deleteMany({ post: post._id }),
-          RepostCaption.deleteMany({ repost: post._id })
+          Post.deleteOne({ _id: repost._id }),
+          Like.deleteMany({ post: repost._id }),
+          Comment.deleteMany({ post: repost._id }),
+          Mention.deleteMany({ post: repost._id }),
+          RepostCaption.deleteMany({ repost: repost._id })
         ]).then(() => post._id)
       })
   } else {
     return Promise.all([
       Post.deleteOne({ _id: post._id }),
-      
       Like.deleteMany({ post: post._id }),
       Comment.deleteMany({ post: post._id }),
       Mention.deleteMany({ post: post._id }),

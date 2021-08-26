@@ -10,7 +10,7 @@ const ProfilePic = ({
   if (user) {
     let iconUrls = {
       user: user.profilePic ? user.profilePic.src : null,
-      default: "https://img.icons8.com/dusk/64/000000/kawaii-ice-cream.png"
+      default: './assets/default-user-pro-pic.png'
     }
 
     const handleActivityIcon = (activity) => {
@@ -21,8 +21,8 @@ const ProfilePic = ({
               className='mentionActivityIcon'
             >
               <img
-                src="https://img.icons8.com/metro/64/ffffff/email.png"
-                alt=''
+                src='./assets/at-symbol-icon.png'
+                alt='at symbol icon'
               />
             </div>
           )
@@ -32,8 +32,8 @@ const ProfilePic = ({
               className='repostActivityIcon'
             >
               <img
-                src="https://img.icons8.com/material-outlined/64/ffffff/retweet.png"
-                alt=''
+                src='./assets/reblog-icon-white.png'
+                alt='reblog icon white'
               />
             </div>
           )
@@ -43,8 +43,8 @@ const ProfilePic = ({
               className='commentActivityIcon'
             >
               <img
-                src="https://img.icons8.com/metro/64/ffffff/speech-bubble.png"
-                alt=''
+                src='./assets/speech-bubble-icon-white.png'
+                alt='speech bubble icon white'
               />
             </div>
           )
@@ -54,8 +54,8 @@ const ProfilePic = ({
               className='followActivityIcon'
             >
               <img
-                src="https://img.icons8.com/metro/64/ffffff/add-user-male.png"
-                alt=''
+                src='./assets/add-user-male-icon-white.png'
+                alt='add user icon male white'
               />
             </div>
           )
@@ -65,8 +65,8 @@ const ProfilePic = ({
               className='likeActivityIcon'
             >
               <img
-                src="https://img.icons8.com/material-sharp/64/ffffff/like--v1.png"
-                alt=''
+                src='./assets/like-icon-white.png'
+                alt='like icon white'
               />
             </div>
           )

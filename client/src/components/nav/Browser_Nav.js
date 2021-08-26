@@ -34,8 +34,8 @@ const BrowserNav = ({
               to='/dashboard'
             >
               <img 
-                src="https://img.icons8.com/fluent-systems-filled/64/ffffff/r.png"
-                alt=''  
+                src="./assets/main-logo.png"
+                alt='main logo'
               />
             </Link>
           </div>
@@ -77,8 +77,8 @@ const BrowserNav = ({
               }}
             >
               <img
-                src="https://img.icons8.com/ios-glyphs/64/ffffff/home-page.png"
-                alt=''
+                src='./assets/home-icon.png'
+                alt='home icon'
               />
             </Link>
           </div>
@@ -95,8 +95,8 @@ const BrowserNav = ({
               }}
             >
               <img 
-                src="https://img.icons8.com/ios/64/ffffff/compass--v1.png"
-                alt=''
+                src='./assets/compass-icon.png'
+                alt='compass icon'
               />
             </Link>
           </div>
@@ -124,8 +124,8 @@ const BrowserNav = ({
             }}
           >
             <img 
-              src="https://img.icons8.com/fluent-systems-filled/64/ffffff/lightning-bolt.png"
-              alt=''
+              src='./assets/lightning-bolt-icon.png'
+              alt='lightning bolt icon'
             />
             {/* {renderTotalCount(totalActivityCountRef, activityCounts, activityOpen)} */}
             <ActivityCountIcon
@@ -164,8 +164,8 @@ const BrowserNav = ({
             }}
           >
             <img
-              src="https://img.icons8.com/material-rounded/64/ffffff/user.png"
-              alt=''
+              src='./assets/user-icon.png'
+              alt='user icon'
             />
           </div>
 
@@ -202,7 +202,7 @@ const BrowserNav = ({
             className='logo'
           >
             <img
-              src="https://img.icons8.com/fluent-systems-filled/48/ffffff/r.png"
+              src="./assets/main-logo.png"
               alt=''  
             />
           </div>

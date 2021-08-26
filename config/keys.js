@@ -8,5 +8,6 @@ export default {
   emailAuthToken: process.env.EMAIL_AUTH_TOKEN,
   hostEmail: process.env.HOST_EMAIL,
   hostPassword: process.env.HOST_PASSWORD,
-  mongoURL: process.env.MONGO_URL
+  mongoURL: process.env.MONGO_URL,
+  bucket: process.env.BUCKET
 }

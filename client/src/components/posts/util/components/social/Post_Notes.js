@@ -106,8 +106,8 @@ const PostNotes = ({
         >
           <img
             className='backBtn'
-            src="https://img.icons8.com/windows/64/000000/long-arrow-left.png"
-            alt=''
+            src='./assets/back-arrow-icon.png'
+            alt='back arrow icon'
             onClick={() => {
               if (window.innerHeight < 980) {
                 allowScroll(document)
@@ -201,7 +201,7 @@ const PostNotes = ({
                       >
                         <img
                           className='repostIconHeader'
-                          src="https://img.icons8.com/material-outlined/64/000000/retweet.png"
+                          src='./assets/reblog-icon-black.png'
                           alt=''
                         />
 
