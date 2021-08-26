@@ -106,7 +106,7 @@ const PostNotes = ({
         >
           <img
             className='backBtn'
-            src='./assets/back-arrow-icon.png'
+            src='/assets/back-arrow-icon.png'
             alt='back arrow icon'
             onClick={() => {
               if (window.innerHeight < 980) {
@@ -201,7 +201,7 @@ const PostNotes = ({
                       >
                         <img
                           className='repostIconHeader'
-                          src='./assets/reblog-icon-black.png'
+                          src='/assets/reblog-icon-black.png'
                           alt=''
                         />
 

@@ -124,7 +124,7 @@ const Feed = ({
                     className='iconRepostedAndFollowContainer'
                   >
                     <img
-                      src='./assets/reblog-icon-black.png'
+                      src='/assets/reblog-icon-black.png'
                       alt='reblog icon'
                     />
                     <Link

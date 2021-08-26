@@ -62,7 +62,7 @@ const UserDetails = ({
             >
               <img
                 className='detailIcon'
-                src='./assets/like-icon-filled.png' 
+                src='/assets/like-icon-filled.png' 
                 alt='like icon filled' 
               />
               Likes
@@ -76,7 +76,7 @@ const UserDetails = ({
             >
               <img 
                 className='detailIcon'
-                src='./assets/user-icon-black.png'
+                src='/assets/user-icon-black.png'
                 alt='add user male icon black'
               />
               Following
@@ -90,7 +90,7 @@ const UserDetails = ({
             >
               <img
                 className='detailIcon'
-                src='./assets/settings-icon-black.png'
+                src='/assets/settings-icon-black.png'
                 alt='settings icon black'
               />
               Settings

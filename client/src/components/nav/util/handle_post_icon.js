@@ -7,7 +7,7 @@ const handlePostIcon = (activity) => {
       return (
         <img
           className='textPostIcon'
-          src='./assets/text-post-icon.png'
+          src='/assets/text-post-icon.png'
           alt='text post icon'
         />
       )
@@ -15,7 +15,7 @@ const handlePostIcon = (activity) => {
       return (
         <img
           className='photoPostIcon'
-          src='./assets/photo-post-mobile-icon.png'
+          src='/assets/photo-post-mobile-icon.png'
           alt='photo post mobile icon'
         />
       )
@@ -23,7 +23,7 @@ const handlePostIcon = (activity) => {
       return (
         <img
           className='quotePostIcon'
-          src='./assets/quote-post-mobile-icon.png'
+          src='/assets/quote-post-mobile-icon.png'
           alt='quote post mobile icon'
         />
       )
@@ -31,7 +31,7 @@ const handlePostIcon = (activity) => {
       return (
         <img
           className='linkPostIcon'
-          src='./assets/link-post-mobile-icon.png'
+          src='/assets/link-post-mobile-icon.png'
           alt='link post mobile icon'
         />
       )
@@ -39,7 +39,7 @@ const handlePostIcon = (activity) => {
       return (
         <img
           className='chatPostIcon'
-          src='./assets/chat-post-mobile-icon.png'
+          src='/assets/chat-post-mobile-icon.png'
           alt='chat post mobile icon'
         />
       )
@@ -47,7 +47,7 @@ const handlePostIcon = (activity) => {
       return (
         <img
           className='audioPostIcon'
-          src='./assets/audio-post-mobile-icon.png'
+          src='/assets/audio-post-mobile-icon.png'
           alt='audio post mobile icon'
         />
     
@@ -56,7 +56,7 @@ const handlePostIcon = (activity) => {
       return (
         <img
           className='videoPostIcon'
-          src='./assets/video-post-mobile-icon.png'
+          src='/assets/video-post-mobile-icon.png'
           alt='video post mobile icon'
         />
       )

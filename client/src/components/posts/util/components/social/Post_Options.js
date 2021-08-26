@@ -62,7 +62,7 @@ const PostOptions = ({
         >
           <img
             className='commentBubbleBtn'
-            src='./assets/speech-bubble-icon.png'
+            src='/assets/speech-bubble-icon.png'
             alt='speech bubble icon'
             onClick={() => {
               toggleNotes()
@@ -71,7 +71,7 @@ const PostOptions = ({
 
           <img 
             className='repostIcon'
-            src='./assets/reblog-icon-black.png'
+            src='/assets/reblog-icon-black.png'
             alt='reblog icon'
             onClick={() => {
               setNotesActive(notesActive = false)
@@ -88,7 +88,7 @@ const PostOptions = ({
 
           <img
             className='deletePostBtn'
-            src='./assets/delete-icon.png'
+            src='/assets/delete-icon.png'
             alt='delete icon'
             onClick={() => {
               setNotesActive(notesActive = false)
@@ -97,7 +97,7 @@ const PostOptions = ({
           />
           <img
             className='editPostBtn'
-            src='./assets/edit-icon.png'
+            src='/assets/edit-icon.png'
             alt='edit icon'
             onClick={() => {
               setNotesActive(notesActive = false)
@@ -126,7 +126,7 @@ const PostOptions = ({
         >
           <img
             className='commentBubbleBtn'
-            src='./assets/speech-bubble-icon.png'
+            src='/assets/speech-bubble-icon.png'
             alt='speech bubble icon'
             onClick={() => {
               toggleNotes()
@@ -135,7 +135,7 @@ const PostOptions = ({
 
           <img 
             className='repostIcon'
-            src='./assets/reblog-icon-black.png'
+            src='/assets/reblog-icon-black.png'
             alt='reblog icon'
             onClick={() => {
               setNotesActive(notesActive = false)

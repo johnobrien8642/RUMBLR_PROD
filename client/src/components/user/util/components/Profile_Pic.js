@@ -21,7 +21,7 @@ const ProfilePic = ({
               className='mentionActivityIcon'
             >
               <img
-                src='./assets/at-symbol-icon.png'
+                src='/assets/at-symbol-icon.png'
                 alt='at symbol icon'
               />
             </div>
@@ -32,7 +32,7 @@ const ProfilePic = ({
               className='repostActivityIcon'
             >
               <img
-                src='./assets/reblog-icon-white.png'
+                src='/assets/reblog-icon-white.png'
                 alt='reblog icon white'
               />
             </div>
@@ -43,7 +43,7 @@ const ProfilePic = ({
               className='commentActivityIcon'
             >
               <img
-                src='./assets/speech-bubble-icon-white.png'
+                src='/assets/speech-bubble-icon-white.png'
                 alt='speech bubble icon white'
               />
             </div>
@@ -54,7 +54,7 @@ const ProfilePic = ({
               className='followActivityIcon'
             >
               <img
-                src='./assets/add-user-male-icon-white.png'
+                src='/assets/add-user-male-icon-white.png'
                 alt='add user icon male white'
               />
             </div>
@@ -65,7 +65,7 @@ const ProfilePic = ({
               className='likeActivityIcon'
             >
               <img
-                src='./assets/like-icon-white.png'
+                src='/assets/like-icon-white.png'
                 alt='like icon white'
               />
             </div>

@@ -34,7 +34,7 @@ const BrowserNav = ({
               to='/dashboard'
             >
               <img 
-                src="./assets/main-logo.png"
+                src="/assets/main-logo.png"
                 alt='main logo'
               />
             </Link>
@@ -77,7 +77,7 @@ const BrowserNav = ({
               }}
             >
               <img
-                src='./assets/home-icon.png'
+                src='/assets/home-icon.png'
                 alt='home icon'
               />
             </Link>
@@ -95,7 +95,7 @@ const BrowserNav = ({
               }}
             >
               <img 
-                src='./assets/compass-icon.png'
+                src='/assets/compass-icon.png'
                 alt='compass icon'
               />
             </Link>
@@ -124,7 +124,7 @@ const BrowserNav = ({
             }}
           >
             <img 
-              src='./assets/lightning-bolt-icon.png'
+              src='/assets/lightning-bolt-icon.png'
               alt='lightning bolt icon'
             />
             {/* {renderTotalCount(totalActivityCountRef, activityCounts, activityOpen)} */}
@@ -164,7 +164,7 @@ const BrowserNav = ({
             }}
           >
             <img
-              src='./assets/user-icon.png'
+              src='/assets/user-icon.png'
               alt='user icon'
             />
           </div>
@@ -202,8 +202,8 @@ const BrowserNav = ({
             className='logo'
           >
             <img
-              src="./assets/main-logo.png"
-              alt=''  
+              src="/assets/main-logo.png"
+              alt='main logo'  
             />
           </div>
           <Search />

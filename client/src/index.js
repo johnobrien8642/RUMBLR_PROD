@@ -235,6 +235,7 @@ setInterval(() => {
 
 const Root = () => {
   var nodeEnv = process.env.NODE_ENV
+
   if (nodeEnv === 'development') {
     return (
       <ApolloProvider client={client}>

@@ -67,7 +67,7 @@ const MobileMenuDD = ({
           >
             <div>
             <img
-              src='./assets/edit-icon-white.png'
+              src='/assets/edit-icon-white.png'
               alt='edit icon white'
             />
             <span>Create a post</span>
@@ -87,7 +87,7 @@ const MobileMenuDD = ({
                 }}
             >
               <img
-                src='./assets/home-icon.png'
+                src='/assets/home-icon.png'
                 alt='home icon white'
               />
               <span>Dashboard</span>
@@ -106,7 +106,7 @@ const MobileMenuDD = ({
               }}
             >
               <img
-                src='./assets/compass-icon.png'
+                src='/assets/compass-icon.png'
                 alt='compass icon'
               />
               <span>Discover</span>
@@ -126,7 +126,7 @@ const MobileMenuDD = ({
               }}
             >
               <img
-                src='./assets/lightning-bolt-icon.png'
+                src='/assets/lightning-bolt-icon.png'
                 alt='lightning bolt icon'
               />
               <span>Activity</span>
@@ -148,7 +148,7 @@ const MobileMenuDD = ({
               }}
             >
               <img 
-                src='./assets/like-icon-white.png'
+                src='/assets/like-icon-white.png'
                 alt='like icon white'
               />
                 <span>Likes</span>
@@ -168,7 +168,7 @@ const MobileMenuDD = ({
               }}
             >
               <img
-                src='./assets/user-icon-white.png'
+                src='/assets/user-icon-white.png'
                 alt='user icon white'
               />
                 <span>Following</span>
@@ -188,7 +188,7 @@ const MobileMenuDD = ({
               to='/settings/account'
             >
               <img
-                src='./assets/settings-icon-white.png'
+                src='/assets/settings-icon-white.png'
                 alt='settings icon white'
               />
               <span>Settings</span>
