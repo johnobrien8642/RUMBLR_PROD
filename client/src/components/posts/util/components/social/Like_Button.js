@@ -50,7 +50,7 @@ const LikeButton = ({
     return (
       <img
         className='likeBtn'
-        src='./assets/like-icon-filled.png'
+        src='/assets/like-icon-filled.png'
         alt='like icon filled'
         onClick={() => {
           unlikePost({
@@ -67,7 +67,7 @@ const LikeButton = ({
     return (
       <img
         className='likeBtn'
-        src='./assets/like-icon-empty.png'
+        src='/assets/like-icon-empty.png'
         alt='like icon empty'
         onClick={() => {
           likePost({
