@@ -10,7 +10,7 @@ const ProfilePic = ({
   if (user) {
     let iconUrls = {
       user: user.profilePic ? user.profilePic.src : null,
-      default: './assets/default-user-pro-pic.png'
+      default: '/assets/default-user-pro-pic.png'
     }
 
     const handleActivityIcon = (activity) => {
