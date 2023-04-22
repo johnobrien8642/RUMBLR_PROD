@@ -138,6 +138,8 @@ const Login = () => {
             <p>Rumblr is a full-featured clone of Tumblr. In the app, you can:</p>
             <ul>
                 <li>Make one of 7 different kinds of posts</li>
+                <li>Add photos to any of your posts. Drag and Drop photos to reorder them</li>
+                <li>Fully edit any of your posts</li>
                 <li>Click on Notes in the bottom right corner of posts and comment, or see activity for a post</li>
                 <li>Click on any tag in a post and be taken to a tag feed</li>
                 <li>Get an infinite scroll in your user feed for all users and tags you follow</li>
