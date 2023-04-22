@@ -139,6 +139,8 @@ const Login = () => {
             <ul>
                 <li>Make one of 7 different kinds of posts</li>
                 <li>Click on Notes in the bottom right corner of posts and comment, or see activity for a post</li>
+                <li>Click on any tag in a post and be taken to a tag feed</li>
+                <li>Get an infinite scroll in your user feed for all users and tags you follow</li>
                 <li>Like posts</li>
                 <li>Repost posts</li>
                 <li>See your Activity in the lightning icon in the top right</li>
