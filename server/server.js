@@ -18,7 +18,7 @@ global.__dirname = path.resolve('./')
 const app = express();
 
 mongoose
-.connect(keys.mongoURL, { 
+.connect(keys.mongoURL, {
   useUnifiedTopology: true,
   useNewUrlParser: true,
   useCreateIndex: true,
@@ -42,7 +42,7 @@ cronTagPostHeat.start()
 cronPostNotesHeat.start()
 cronUserPostingHeat.start()
 
-  
+
 app.use(express.json({ limit: '50mb' }))
 app.use('/api/posts', posts);
 app.use('/api/mailer', mailer);

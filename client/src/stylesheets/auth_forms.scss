@@ -1,3 +1,32 @@
+.login-form-explainer {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 5rem;
+
+  h1 {
+    font-weight: 900;
+    font-size: 70px;
+    filter: contrast(500%);
+    color: white;
+    width: fit-content;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  li {
+    display: list-item;
+    list-style-type: disc;
+    font-size: 1.2rem;
+    margin: .5rem 0;
+  }
+}
+
 .loginForm, .registerForm {
   display: flex;
   flex-direction: column;
@@ -5,7 +34,7 @@
   width: 325px;
   margin: auto;
   margin-top: 150px;
-  margin-bottom: 200px;
+  margin-bottom: 1rem;
   font-family: 'Noto Sans JP', sans-serif;
   color: var(--mid-gray);
 
@@ -18,7 +47,7 @@
   }
 
   .profilePicPreview {
-    
+
     .previewImg {
       position: relative;
       width: 300px;
@@ -64,7 +93,7 @@
         flex-direction: column;
         top: 50%;
         transform: translateY(-50%);
-        
+
         img {
           display: block;
           margin: auto;
@@ -90,8 +119,8 @@
     text-align: center;
     flex-direction: column;
     align-content: center;
-    
-    
+
+
     h1 {
       font-weight: 900;
       font-size: 70px;
@@ -103,6 +132,10 @@
       font-size: 18px;
       font-weight: 700;
       color: rgb(255, 255, 255, 0.8);
+    }
+
+    .explainer-two {
+      margin: 2rem 0;
     }
 
     a {

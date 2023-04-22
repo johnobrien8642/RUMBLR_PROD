@@ -82,7 +82,7 @@ const client = new ApolloClient({
               const elements = [...existing, ...incoming].reduce((array, current) => {
                 return array.map(i => i.__ref).includes(current.__ref) ? array : [...array, current];
               }, []);
-            
+
               return elements
             }
           }
@@ -101,7 +101,7 @@ const client = new ApolloClient({
               const elements = [...existing, ...incoming].reduce((array, current) => {
                 return array.map(i => i.__ref).includes(current.__ref) ? array : [...array, current];
               }, []);
-            
+
               return elements
             }
           }
@@ -119,7 +119,7 @@ const client = new ApolloClient({
               const elements = [...existing, ...incoming].reduce((array, current) => {
                 return array.map(i => i.__ref).includes(current.__ref) ? array : [...array, current];
               }, []);
-            
+
               return elements
             }
           }
@@ -137,7 +137,7 @@ const client = new ApolloClient({
               const elements = [...existing, ...incoming].reduce((array, current) => {
                 return array.map(i => i.__ref).includes(current.__ref) ? array : [...array, current];
               }, []);
-            
+
               return elements
             }
           }
@@ -155,7 +155,7 @@ const client = new ApolloClient({
               const elements = [...existing, ...incoming].reduce((array, current) => {
                 return array.map(i => i.__ref).includes(current.__ref) ? array : [...array, current];
               }, []);
-            
+
               return elements
             }
           }
@@ -173,7 +173,7 @@ const client = new ApolloClient({
               const elements = [...existing, ...incoming].reduce((array, current) => {
                 return array.map(i => i.__ref).includes(current.__ref) ? array : [...array, current];
               }, []);
-            
+
               return elements
             }
           }
@@ -243,7 +243,7 @@ const Root = () => {
           <App />
         </HashRouter>
       </ApolloProvider>
-    )  
+    )
   } else {
     return (
       <ApolloProvider client={client}>
