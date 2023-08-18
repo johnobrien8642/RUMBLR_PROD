@@ -17,7 +17,7 @@ const { IS_LOGGED_IN } = Queries;
 const { VERIFY_USER, LOGOUT_USER } = Mutations;
 
 const token = Cookies.get('auth-token');
-const envURI = process.env.NODE_ENV === 'development' ? `http://localhost:5000/graphql` : 'https://rumblr.app/graphql'
+const envURI = process.env.NODE_ENV === 'development' ? `http://localhost:5000/graphql` : 'https://rumblr-prod-2-lbfdj.ondigitalocean.app/graphql'
 
 const authLink = setContext((_, { headers }) => {
   return {

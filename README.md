@@ -4,7 +4,7 @@ Exploring Rumblr is easy. Follow the link below. The form is pre-filled
 with a guest account. Simply click Log in. You can also make your own account
 by navigating to the Sign up page.
 
-https://rumblr.app
+https://rumblr-prod-2-lbfdj.ondigitalocean.app
 
 Rumblr will automatically log you out after 2 hours. Simply log back in if you weren't
 done exploring Rumblr.
@@ -15,7 +15,7 @@ and inspect the source code here in this repository.
 
 [Check out this full list of features I've made for all the features I was able to implement (there are 90+!).](https://d1k9pgunak0305.cloudfront.net/ListOfFeaturesRumblr.pdf)
 
-[Check out this blog post where I give more information 
+[Check out this blog post where I give more information
 about my story and a full critique of this app.](https://johnobriendeveloper.com/blog/60e2367e16fa3c12470e36d5)
 
 
@@ -31,13 +31,13 @@ MERNGA stack here for a few different reasons:
 -After being introduced to React I found that I really enjoyed how easy it made
 using Javascript to render all of my UI.
 
--I found that the GraphQL query paradigm made a lot of sense to me and offered me 
+-I found that the GraphQL query paradigm made a lot of sense to me and offered me
 a degree of control over my queries that other fetching methods lack.
 
 -There were a few times when I did end up using regular RESTful routes. Express
 makes REST easy.
 
--I greatly enjoy the power of Apollo and wanted to get more experience using it. 
+-I greatly enjoy the power of Apollo and wanted to get more experience using it.
 
 -I find I'm very interested in NoSQL and enjoy using the document based database
 system. MongoDB and Mongoose is a very mature and powerful combination. I knew I
@@ -45,7 +45,7 @@ was going to be changing my database frequently and not having to write migratio
 helped greatly speed up development time.
 
 -The MERNGA stack I used is far less forgiving and streamlined than using Ruby On Rails.
-I wanted to challenge myself to master a less forgiving stack to really solidify my 
+I wanted to challenge myself to master a less forgiving stack to really solidify my
 the fundamentals of my newly acquired programming knowledge.
 
 ---------------------------------------------------------------------------------------
@@ -64,16 +64,16 @@ Highlighting just a few of the features I built, these two come to mind:
    with custom object indexes to keep the image file upload array in sync with
    how the images were being displayed. Doing this ensured that the file uploads
    were always uploaded and returned in the order that they appeared within the post.
-   
+
 2) Tumblr has a style of post called a Chat post, and I built my own version of it.
    This was a great learning experience using Javascript ranges, selections and a
    little bit of regex. I used all three to make the Chat post function. When making
    a chat post everytime a colon is entered on a new line everything to the left of the colon
    is bolded. This experience actually led me to learning about rich text editors and eventually
    implementing one called CKEditor which I integrated throughout the app.
-   
+
  ---------------------------------------------------------------------------------------
- 
+
 This has been a great experience. I've learned so much just over the course of the past three months.
 Looking back at my codebase as I'm about to declare the first version of this app finished
 I can already see countless areas for improvement. I also see countless lessons that I'm excited
