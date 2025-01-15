@@ -25,7 +25,7 @@ mongoose
   bufferCommands: false
 })
 .then(() => console.log('Connected to MongoDB successfully'))
-.catch(err => console.log(err))
+.catch(err => console.log(`Mongo connect err: ${err}`))
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'))
