@@ -21,10 +21,7 @@ mongoose
 .connect(keys.mongoURL, {
   useUnifiedTopology: true,
   useNewUrlParser: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
   serverSelectionTimeoutMS: 1000,
-  bufferMaxEntries: 0,
   bufferCommands: false
 })
 .then(() => console.log('Connected to MongoDB successfully'))
