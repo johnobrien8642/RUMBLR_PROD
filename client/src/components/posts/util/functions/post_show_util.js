@@ -291,7 +291,7 @@ const postBody = (post) => {
       <React.Fragment>
         {
           data.videoLink.url.includes('youtube') &&
-            <iframe width="100%" height="315" src={data.videoLink.url} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            <iframe width="100%" height="315" src={data.videoLink.url} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         }
         {
           !data.videoLink.url.includes('youtube') &&
