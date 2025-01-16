@@ -20,7 +20,7 @@ const MainImageInput = ({
             type='file'
             multiple
             name='image'
-            accept='.png, .jpg, jpeg'
+            accept='.png, .jpg, .jpeg'
             onChange={e => {
               var files = Object.values(e.currentTarget.files)
 

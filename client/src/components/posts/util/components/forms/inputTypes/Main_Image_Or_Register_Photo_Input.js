@@ -37,7 +37,7 @@ const MainImageOrRegisterPhotoInput = ({
               id='profilePicFileInput'
               type='file'
               name='image'
-              accept='.png, .jpg, jpeg'
+              accept='.png, .jpg, .jpeg'
               onChange={e => {
                 previewProfilePic(
                   e,

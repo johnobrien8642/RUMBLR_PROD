@@ -52,7 +52,7 @@ const AddPhotoDivOrPhotoInput = ({
             type='file'
             multiple
             name='image'
-            accept='.png, .jpg, jpeg'
+            accept='.png, .jpg, .jpeg'
             onChange={e => {
               previewMainImages(
                 e, main, mainImageFiles,
