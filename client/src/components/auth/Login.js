@@ -152,7 +152,6 @@ const Login = () => {
                 <li>Log out, click Sign Up and create a completely new user if you want!</li>
                 <li>Click on your User icon in the top right and see your likes, Follows and Followers, Posts, etc</li>
                 <li>In your User dropdown, go to Activity and see your activity again with more detail</li>
-                <li>Start typing in "Omar" or "Tommy" or "nice" in the search bar and see your search results returned in real time!</li>
                 <li>Create new tags when you create a post, or select existing ones, type "#" in the search bar to see some existing ones</li>
             </ul>
           </div>
