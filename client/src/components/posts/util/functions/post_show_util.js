@@ -289,12 +289,19 @@ const postBody = (post) => {
   } else if (data.kind === 'VideoPost') {
     return (
       <React.Fragment>
-        <ReactPlayer
-          width={'100%'}
-          height={'100%'}
-          url={data.videoLink.url}
-          controls
-        />
+        {
+          data.videoLink.url.includes('youtube') &&
+            <iframe width="560" height="315" src={data.videoLink.url} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        }
+        {
+          !data.videoLink.url.includes('youtube') &&
+            <ReactPlayer
+              width={'100%'}
+              height={'100%'}
+              url={data.videoLink.url}
+              controls
+            />
+        }
         {displayDescription(descriptionArr)}
       </React.Fragment>
     )
