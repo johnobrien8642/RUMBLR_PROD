@@ -78,7 +78,8 @@ const Login = () => {
           <p>
             This is a fully functional and full-featured
             application. There are over 90+ included features throughout this site.
-            It is connected to both Mongodb Atlas as well as an AWS S3 bucket.
+            It is connected to MongoDB Atlas and AWS S3 for asset management, with
+            Cloudfront used as the CDN.
           </p>
           <p className='explainer-two' >
             A guest user has been pre-filled in the login form. Simply click Login to
