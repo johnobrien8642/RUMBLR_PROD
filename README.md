@@ -1,4 +1,4 @@
-Hi, welcome to my clone of Tumblr, called Rumblr.
+Hi, my name's John, welcome to my clone of Tumblr, called Rumblr.
 
 https://rumblr.net
 
